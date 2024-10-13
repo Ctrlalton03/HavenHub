@@ -1,0 +1,3 @@
+[submodule "HavenHub"]
+	path = HavenHub
+	url = https://github.com/Ctrlalton03/HavenHub.git
