@@ -1,0 +1,87 @@
+@font-face {
+    font-family: "FreightBigProBold";
+    src: url('./Fonts/FreightBigProBold.ttf');
+}
+@font-face {
+    font-family: "FreightBigProBook";
+    src: url('./Fonts/FreightBigProBook.ttf');
+}
+@font-face {
+    font-family: "FreightBigProMedium";
+    src: url('./Fonts/FreightBigProMedium.ttf');
+}
+@font-face {
+    font-family: "FreightBigProLight";
+    src: url('./Fonts/FreightBigProLight.ttf');
+}
+@font-face{
+    font-family: "Muli";
+    src: url('./Fonts/Muli.ttf');
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.search-bar{
+    background-color: white;
+    height: 100%;
+    width: 80%;
+    max-width: 400px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.468);
+    margin: 10px;
+}
+
+.form-input{
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #000;
+    border-radius: 5px;
+    font-size: 1rem;
+}
+
+.form-input input::placeholder{
+    font-family: "FreightBigProBook";
+    font-size: 1rem;
+}
+
+.form-input label{
+    font-family: "Muli";
+}
+
+.search-bar input{
+    width: 100%;
+}
+
+
+form button{
+    width: 100%;
+    padding: 10px;
+    font-family: "FreightBigProBold";
+    font-weight: 500;
+    font-size: 1.2rem;
+    color: #000000;
+    border: none;
+    background-color: white;
+    border-radius: 5px;
+    cursor: pointer; 
+    transition: all 0.3s ease-in-out;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.651);
+}
+
+form button:hover{
+    background-color: #91C7B1 !important;
+    color: white;
+    cursor: pointer;
+    
+}
+

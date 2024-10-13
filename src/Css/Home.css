@@ -1,0 +1,692 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap");
+
+
+@font-face {
+    font-family: "FreightBigProBold";
+    src: url('./Fonts/FreightBigProBold.ttf');
+}
+@font-face {
+    font-family: "FreightBigProBook";
+    src: url('./Fonts/FreightBigProBook.ttf');
+}
+@font-face {
+    font-family: "FreightBigProMedium";
+    src: url('./Fonts/FreightBigProMedium.ttf');
+}
+@font-face {
+    font-family: "FreightBigProLight";
+    src: url('./Fonts/FreightBigProLight.ttf');
+}
+@font-face{
+    font-family: "Muli";
+    src: url('./Fonts/Muli.ttf');
+}
+
+body{
+    --angle: 45deg; 
+    background: linear-gradient(var(--angle), oklab(82.7% 0.007 0.045), oklab(71.7% 0.019 0.058), oklab(63.2% 0.027 0.057), oklab(56.7% 0.028 0.05), oklab(48.8% 0.027 0.043));
+    background-repeat: no-repeat;
+
+}
+
+h1{
+    font-family: "Muli";
+    font-size: 20px;
+    color: #000;
+}
+
+
+
+.WelcomeSection{
+    background-size: cover;
+    background-image: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url("../Images/InsideView-min.jpg");
+    background-position: center;
+    overflow: hidden;
+    position: relative;
+    backdrop-filter: blur(5px);
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+.WelcomeSection::before{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    filter:brightness(0.5);
+    z-index: 1;
+}
+.WelcomeSection h1{
+    width: 100%;
+    padding: 10px;
+    text-align: center;
+    font-family: "FreightBigProBold";
+    font-size: 3rem;
+    color: #ffffff;
+    position: relative;
+    z-index: 2;
+    text-align: center;
+    text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5);
+}
+
+.WelcomeSection p{
+    width: 80%;
+    padding: 10px;
+    text-align: center;
+    font-family: "Lato";
+    font-size: 1rem;
+    color: #B33951;
+    position: relative;
+    z-index: 2;
+    text-align: center;
+    text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5);
+}
+.Welcome-content{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#VerticalSearchBarContainer{
+    display: none;
+}
+
+.button-Container{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 10px;
+    gap: 10px;
+}
+
+.button-Container button{
+    width: 80%;
+    padding: 10px;
+    font-family: "FreightBigProBold";
+    font-weight: 500;
+    font-size: 1.2rem;
+    color: #000000;
+    border: none;
+    background-color: white;
+    border-radius: 5px;
+    cursor: pointer; 
+    transition: all 0.3s ease-in-out;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.651);
+}
+
+.Custom-button:hover{
+    background-color: #B33951 !important;
+    color: white;
+    cursor: pointer;
+    
+}
+
+.Hotel-hero-section{
+    margin: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.Hotel-hero-section h1{
+    font-family: "FreightBigProBold";
+    font-size: 2rem;
+    color: #B33951;
+    text-align: center;
+}
+
+.Hotel-hero-section p{
+    font-family: "Lato";
+    font-size: 1rem;
+    color: #000000;
+    text-align: center;
+}
+
+.content-section{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    gap: 20px;
+}
+
+.hero-image-container{
+    display: none;
+}
+
+.Desktop-View{
+    display: none;
+}
+
+
+.Featured-rooms{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.Featured-rooms h1{
+    font-family: "FreightBigProBold";
+    font-size: 2rem;
+    color: #000000;
+    text-align: center;
+}
+
+
+.Room-list{
+    border-radius: 10px;
+    width: 70%;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.room{
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.651);
+
+}
+
+.room-content{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    padding: 10px;
+    background-color: white ;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+
+}
+
+.room-content button:hover{
+    background-color: #91C7B1 !important;
+    color: white;
+    cursor: pointer;
+}
+
+.Room-list img{
+    border-top-left-radius:10px ;
+    border-top-right-radius: 10px;
+}
+
+.Featured-rooms button{
+    margin-top: 20px;
+}
+
+.Featured-rooms button:hover{
+    background-color: #91C7B1 !important;
+    color: white;
+    cursor: pointer;
+}
+
+.Services-Amenities-Container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    gap: 20px;
+}
+
+.Services-Amenities-Container h1{
+    font-family: "FreightBigProBold";
+    font-size: 2rem;
+    color: #000000;
+    text-align: center;
+}
+
+.Services-Amenities-Content{
+    justify-content: center;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 5px;
+}
+
+.Services-Amenities-Description button{
+    margin: 20px;
+    background-color: #B33951;
+    
+}
+
+
+.Offers-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.OffersHeader{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.OffersHeader h1{
+    font-family: "FreightBigProBold";
+    font-size: 2rem;
+    color: #000000;
+    text-align: center;
+}
+
+.OffersHeader p {
+    font-family: "Lato";
+    font-size: 1.1rem;
+    color: #000000;
+    text-align: center;
+    width: 90%;
+
+}
+
+
+.OffersCard{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    margin: 20px;
+    gap: 20px;
+    width: 80%;
+    max-width: 400px;
+    min-height: 530px;
+}
+
+.Card-Header img{
+    object-fit: cover;
+    max-height: 200px;
+    width: 100%;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    
+}
+
+.Card-Header{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    padding: 0px !important;
+}
+
+.Specials-content{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    gap: 10px;
+    min-height: 150px;
+
+}
+
+.Specials-content p{
+    font-family: "Lato";
+    font-size: 0.9rem;
+    color: #000000;
+    text-align: center;
+}
+
+.Specials-content{
+    width: 90%;
+    padding: 0px !important;
+}
+
+
+
+
+.Learn-btn button{
+    background-color: #B33951 !important;
+    color: white;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+}
+
+.Learn-btn button:hover{
+    background-color: #ffffff !important;
+    color: #B33951;
+    cursor: pointer;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.651);
+}
+
+.CardContainer{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.Dining-Area-Container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+   
+}
+
+.Dining-Area-Container h1{
+    font-family: "FreightBigProBold";
+    font-size: 2rem;
+    color: #000000;
+    text-align: center;
+}
+
+.Dining-Area-Content{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    gap: 10px;
+    text-align: center;
+}
+
+.image-container-dining{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+    overflow: hidden;
+    align-items: center;
+}
+
+.Dining-Area-Image-left{
+    width: 80%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 2px 4px rgb(0, 0, 0);
+
+}
+
+.image-container-dining img{
+    width: 100%;
+    object-fit: cover;
+    height: 100%;
+}
+
+.Dining-Area-Content button{
+    background-color: #B33951 !important;
+    color: white;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+}
+
+.Nearby-Attraction-container{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.Nearby-Attraction-container h1{
+    font-family: "FreightBigProBold";
+    font-size: 2rem;
+    color: #000000;
+    padding: 10px;
+    text-align: center;
+}
+
+.Nearby-Attraction-Content{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    gap: 10px;
+    text-align: center;
+}
+
+.image-container-attractions{
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.651);
+}
+
+.Nearby-Attraction-Description{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    padding: 10px;
+    text-align: center;
+}
+
+.Nearby-Attraction-Description button{
+    background-color: #B33951 !important;
+    color: white;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+}
+
+
+@media screen and (min-width: 768px){
+
+    .content-section{
+        display: none;
+    }
+
+    .Desktop-View{
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        grid-template-columns: repeat(5, 1fr);
+        grid-template-rows: 1fr 0 repeat(3, 1fr);
+        grid-column-gap: 1px;
+
+    }
+
+    .div1{
+        padding: 10px;
+        
+    }
+
+    .div1 h1{
+        text-align: left;
+        }
+
+    .div1 p{
+        text-align: left;
+        font-family: "Lato";
+        font-size: 1.1rem;
+    }
+
+    .div2{
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        gap: 30px;
+
+    }
+
+    .div2 img{
+        width: 70%;
+        max-height: 600px;
+        max-width: 800px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.651);
+    }
+
+    .div3{
+        display: flex;
+        flex-direction: row;
+        text-align: left;
+        justify-content: space-evenly;
+        align-items: center;
+        gap: 10px;
+        padding: 10px;
+        width: 100%;
+    }
+
+    .div3 p{
+        font-family: "Lato";
+    }
+
+    #Content-underimage-description{
+        display: flex;
+        justify-content: space-between;
+        flex-direction: column;
+        width: 40%;
+        border-radius: 15px;
+        padding: 10px;
+        align-items: center;
+        height: 100%;
+    }
+
+    #ImageDescriptionContainer{
+        padding: 5px;
+        width: 40%;
+        object-fit: cover;
+
+    }
+
+    #ImageDescriptionContainer img{
+        width: 100%;
+        max-width: 600px;
+        object-fit: cover;
+    }
+
+    .div3 p{
+        font-family: "Muli";
+        text-align: center;
+
+    }
+
+    .Featured-rooms{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 20px;
+
+    }
+    
+    .Featured-rooms h1{
+        font-family: "FreightBigProBold";
+        font-size: 2rem;
+        color: #000000;
+        text-align: center;
+        margin-bottom: 20px;
+        border: 1px solid red;
+        width: 100%;
+    }
+
+    .Room-list{
+        border-radius: 10px;
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+        align-items: center;
+        gap: 15px;
+    }
+
+    .room-content h3{
+        font-family: "FreightBigProBold";
+        font-size: 1.5rem;
+        color: #000000;
+        
+    }
+
+    .room{
+
+        max-width: 500px;
+    }
+
+    .room:hover{
+        transform: scale(1.1);
+        transition: all 0.5s ease-in-out;
+    }
+
+    .room img{
+        width: 100%;
+        object-fit: cover;
+        height: 200px;
+    }
+
+    .room-content p{
+        text-align: center;
+        font-family: "Muli";
+        font-size: 1.1rem;
+        color: #000000;
+    }
+
+    .Featured-rooms button{
+        margin-top: 30px;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+    }
+    .Services-Amenities-Container{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 20px;
+        gap: 20px;
+    }
+    
+    .Services-Amenities-Content{
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    .image-container-services{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        width: 60%;
+        align-items: center;
+        gap: 20px;
+        padding: 20px;
+    }
+    
+    .image-container-services img{
+        width: 100%;
+        max-width: 600px;
+    }
+    
+    .Services-Amenities-Description{
+        display: flex;
+        flex-direction: column;
+        width: 40%;
+        text-align: center;
+        justify-content: center;
+        align-items: center;
+        gap: 20px;
+        padding: 20px;
+    }
+
+    .OffersCard:hover{
+        transform: scale(1.05);
+        transition: all 0.5s ease-in-out;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.651);
+    }
+
+
+
+};

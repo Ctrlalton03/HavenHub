@@ -1,0 +1,46 @@
+.vert-search-bar{
+    padding: 10px;
+    width: 90%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    background-color: white;
+    color: #B33951;
+    border-radius: 20px;
+}
+
+.vert-form-input{
+    width: 60%;
+    margin: 10px;
+    border-radius: 5px;
+    font-size: 1rem;
+}
+
+.vert-search-bar input{
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #000;
+    border-radius: 5px;
+    font-size: 1rem;
+}
+
+.vert-search-bar input::placeholder{
+    font-family: "FreightBigProBook";
+    font-size: 1rem;
+}
+
+.vert-search-bar label{
+    font-size: 0.6rem;
+    font-family: "Muli";
+    
+}
+
+.vert-search-bar button{
+    max-width: fit-content;
+    padding: 10px;
+    border-radius: 5px;
+    font-size: 1rem;
+    background-color: white;
+    color: black;
+}
