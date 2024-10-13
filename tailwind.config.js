@@ -2,8 +2,7 @@
 export default {
     darkMode: ['class'],
 	content: [
-		"./src/**/*.{js,jsx,ts,tsx}", // adjust this path as needed for your project
-	],
+		"./src/**/*.{js,jsx,ts,tsx}"],
   	theme: {
   	extend: {
   		borderRadius: {

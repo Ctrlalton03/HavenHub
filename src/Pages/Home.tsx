@@ -188,9 +188,7 @@ const Home = () => {
                         <Button><Link to="/attractions">Explore Nearby Attractions</Link></Button>
                     </div>
                 </div>
-
             </section>
-
         </div>
     )
 }
