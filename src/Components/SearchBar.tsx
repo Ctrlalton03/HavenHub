@@ -1,5 +1,5 @@
 import { useState } from "react";
-import '../Css/SearchBar.css';
+import '@/Css/SearchBar.css';
 import { Button } from "@/Components/ui/button";
 import { Input } from "./ui/input";
 import { Label } from "./ui/label";
@@ -67,7 +67,6 @@ const SearchBar :React.FC<SearchBarProps> = ({onSearch}) => {
         />
 
         </div>
-       
         <Button type="submit">Search</Button>
     </form>
     );
