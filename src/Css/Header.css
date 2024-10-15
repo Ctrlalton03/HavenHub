@@ -130,7 +130,7 @@ nav ul li a{
       transition: all 0.3s ease;
       --angle: 45deg; 
       background: linear-gradient(var(--angle), oklab(82.7% 0.007 0.045), oklab(71.7% 0.019 0.058), oklab(63.2% 0.027 0.057), oklab(56.7% 0.028 0.05), oklab(48.8% 0.027 0.043));
-        transform: translateY(-20px);
+      
     }
 
     
@@ -172,7 +172,6 @@ nav ul li a{
         align-items: center;
         padding:  20px;
         background-color: transparent;
-        background-color: #91C7B1;
         box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
         
     }

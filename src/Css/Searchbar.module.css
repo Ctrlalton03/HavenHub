@@ -25,8 +25,8 @@
   box-sizing: border-box;
 }
 
-.search-bar {
-  background-color: white;
+.searchbar {
+  background-color: white !important;
   height: 100%;
   width: 80%;
   max-width: 400px;
@@ -41,7 +41,7 @@
   margin: 10px;
 }
 
-.form-input {
+.formInput {
   width: 100%;
   padding: 10px;
   border: 1px solid #000;
@@ -49,12 +49,12 @@
   font-size: 1rem;
 }
 
-.form-input input::placeholder {
+.formInput input::placeholder {
   font-family: "FreightBigProBook";
   font-size: 1rem;
 }
 
-.form-input label {
+.formInput label {
   font-family: "Muli";
 }
 
@@ -78,7 +78,7 @@ form button {
 }
 
 form button:hover {
-  background-color: #91c7b1 !important;
+  background-color: #b33951 !important;
   color: white;
   cursor: pointer;
 }

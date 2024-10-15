@@ -22,12 +22,6 @@
     src: url('./Fonts/Muli.ttf');
 }
 
-body{
-    --angle: 45deg; 
-    background: linear-gradient(var(--angle), oklab(82.7% 0.007 0.045), oklab(71.7% 0.019 0.058), oklab(63.2% 0.027 0.057), oklab(56.7% 0.028 0.05), oklab(48.8% 0.027 0.043));
-    background-repeat: no-repeat;
-
-}
 
 h1{
     font-family: "Muli";
@@ -39,7 +33,7 @@ h1{
 
 .WelcomeSection{
     background-size: cover;
-    background-image: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url("../Images/InsideView-min.jpg");
+    background-image: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url("../Images/OutsideView-min.jpg");
     background-position: center;
     overflow: hidden;
     position: relative;
@@ -74,13 +68,17 @@ h1{
     text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5);
 }
 
+.Welcome-content-desktop{
+    display: none;
+}
+
 .WelcomeSection p{
-    width: 80%;
-    padding: 10px;
+    width: 30%;
+    padding-top: 10px;
     text-align: center;
     font-family: "Lato";
     font-size: 1rem;
-    color: #B33951;
+    color: white;
     position: relative;
     z-index: 2;
     text-align: center;
@@ -97,143 +95,105 @@ h1{
     display: none;
 }
 
-.button-Container{
+.AboutHotelSection{
+    margin-bottom: 50px;
+}
+
+.AboutHotelImgContainerRow1{
+    margin: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.ImageCircular{
+    border-radius: 50%;
+    width: 300px;
+    height: 300px;
+    object-fit: cover;
+    overflow: hidden;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.651);
+
+}
+
+.ImageCircular img{
     width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    padding: 10px;
-    gap: 10px;
+    height: 100%;
+    object-fit: cover;
 }
 
-.button-Container button{
-    width: 80%;
+.AboutHotelImgContainerRow2{
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
     padding: 10px;
-    font-family: "FreightBigProBold";
-    font-weight: 500;
-    font-size: 1.2rem;
-    color: #000000;
-    border: none;
-    background-color: white;
-    border-radius: 5px;
-    cursor: pointer; 
-    transition: all 0.3s ease-in-out;
+}
+.ImageCircular2{
+    border-radius: 50%;
+    width: 125px;
+    height: 125px;
+    object-fit: cover;
+    overflow: hidden;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.651);
+
 }
 
-.Custom-button:hover{
-    background-color: #B33951 !important;
-    color: white;
-    cursor: pointer;
-    
+.ImageCircular2 img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
 }
 
-.Hotel-hero-section{
-    margin: 20px;
+
+.AboutHotelContent{
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding: 20px;
-}
-
-.Hotel-hero-section h1{
-    font-family: "FreightBigProBold";
-    font-size: 2rem;
-    color: #B33951;
-    text-align: center;
-}
-
-.Hotel-hero-section p{
-    font-family: "Lato";
-    font-size: 1rem;
-    color: #000000;
-    text-align: center;
-}
-
-.content-section{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    padding: 20px;
     gap: 20px;
+    padding: 20px;
 }
 
-.hero-image-container{
-    display: none;
-}
-
-.Desktop-View{
-    display: none;
-}
-
-
-.Featured-rooms{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin-bottom: 20px;
-}
-
-.Featured-rooms h1{
+.AboutHotelContent h1{
     font-family: "FreightBigProBold";
     font-size: 2rem;
     color: #000000;
     text-align: center;
 }
 
-
-.Room-list{
-    border-radius: 10px;
-    width: 70%;
-    display: flex;
-    flex-direction: column;
-    gap: 15px;
+.AboutHotelContent p{
+    font-family: "Lato";
+    font-size: 1.1rem;
+    color: #000000;
+    text-align: center;
+    width: 90%;
 }
 
-.room{
-    border-radius: 10px;
+.AboutHotelContent button{
+    background-color: #B33951;
+    color: white;
+    cursor: pointer;
+    transition: all 0.7s ease-in-out;
+}
+
+.AboutHotelContent button:hover{
+    background-color: #ffffff;
+    color: #B33951;
+    cursor: pointer;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.651);
-
 }
 
-.room-content{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    gap: 10px;
-    padding: 10px;
-    background-color: white ;
-    border-bottom-left-radius: 10px;
-    border-bottom-right-radius: 10px;
-
+.AboutHotelImgContainerRow2:nth-of-type(1){
+    display: none;
 }
-
-.room-content button:hover{
-    background-color: #91C7B1 !important;
-    color: white;
-    cursor: pointer;
-}
-
-.Room-list img{
-    border-top-left-radius:10px ;
-    border-top-right-radius: 10px;
-}
-
-.Featured-rooms button{
-    margin-top: 20px;
-}
-
-.Featured-rooms button:hover{
-    background-color: #91C7B1 !important;
-    color: white;
-    cursor: pointer;
-}
+/* Service section*/
 
 .Services-Amenities-Container{
+    width: 100%;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -249,7 +209,15 @@ h1{
     text-align: center;
 }
 
+.Services-Amenities-Container h2{
+    font-family: "FreightBigProBold";
+    font-size: 1.5rem;
+    color: #000000;
+    text-align: center;
+}
+
 .Services-Amenities-Content{
+    width: 100%;
     justify-content: center;
     text-align: center;
     display: flex;
@@ -258,11 +226,96 @@ h1{
     padding: 5px;
 }
 
+.Services-Amenities-Description{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    padding: 30px;
+}
+
 .Services-Amenities-Description button{
     margin: 20px;
     background-color: #B33951;
     
 }
+
+
+
+.AmenitiesRow2{
+    display: flex;
+    flex-direction: row-reverse;
+    width:100%;
+}
+
+.Services-Amenities-Content2{
+    width: 100%;
+    justify-content: center;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 5px;
+}
+
+.Services-Amenities-Description2 button{
+    margin: 20px;
+    background-color: #B33951;
+    
+}
+
+.image-container-services{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+    align-items: center;
+    gap: 20px;
+    padding: 20px;
+}
+
+.image-container-services2{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+    align-items: center;
+    gap: 20px;
+    padding: 20px;
+}
+
+.image-container-services2 img{
+    width: 100%;
+    max-width: 600px;
+}
+
+.Services-Amenities-Description2{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    padding: 30px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 .Offers-container{
@@ -309,6 +362,8 @@ h1{
     width: 80%;
     max-width: 400px;
     min-height: 530px;
+    
+    
 }
 
 .Card-Header img{
@@ -378,274 +433,176 @@ h1{
     flex-wrap: wrap;
 }
 
-.Dining-Area-Container{
+
+/*Contact-Us-Mobile*/
+.ContactUsSection{
+    background-color: #B33951;
+    width: 100%;
+    height: 100%;
+    margin-bottom: 50px;
+    
+}
+
+.ContactUsContainer{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.ContactFormContainer{
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-   
+    gap: 20px;
+    padding: 20px;
 }
 
-.Dining-Area-Container h1{
+.ContactFormContainer h1{
     font-family: "FreightBigProBold";
     font-size: 2rem;
-    color: #000000;
+    color: #ffffff;
     text-align: center;
 }
 
-.Dining-Area-Content{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    padding: 10px;
-    gap: 10px;
+.ContactFormContainer p{
+    font-family: "Lato";
+    font-size: 1.1rem;
+    color: #ffffff;
     text-align: center;
+    width: 90%;
 }
 
-.image-container-dining{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    width: 100%;
-    overflow: hidden;
-    align-items: center;
-}
 
-.Dining-Area-Image-left{
-    width: 80%;
-    height: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    box-shadow: 0 2px 4px rgb(0, 0, 0);
 
-}
-
-.image-container-dining img{
-    width: 100%;
-    object-fit: cover;
-    height: 100%;
-}
-
-.Dining-Area-Content button{
-    background-color: #B33951 !important;
-    color: white;
-    cursor: pointer;
-    transition: all 0.3s ease-in-out;
-}
-
-.Nearby-Attraction-container{
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-}
-
-.Nearby-Attraction-container h1{
-    font-family: "FreightBigProBold";
-    font-size: 2rem;
-    color: #000000;
-    padding: 10px;
-    text-align: center;
-}
-
-.Nearby-Attraction-Content{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    padding: 10px;
-    gap: 10px;
-    text-align: center;
-}
-
-.image-container-attractions{
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.651);
-}
-
-.Nearby-Attraction-Description{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    gap: 10px;
-    padding: 10px;
-    text-align: center;
-}
-
-.Nearby-Attraction-Description button{
-    background-color: #B33951 !important;
-    color: white;
-    cursor: pointer;
-    transition: all 0.3s ease-in-out;
-}
 
 
 @media screen and (min-width: 768px){
-
-    .content-section{
+    .Welcome-content{
         display: none;
     }
 
-    .Desktop-View{
+    .Welcome-content-desktop{
         display: flex;
         flex-direction: column;
-        width: 100%;
-        grid-template-columns: repeat(5, 1fr);
-        grid-template-rows: 1fr 0 repeat(3, 1fr);
-        grid-column-gap: 1px;
-
-    }
-
-    .div1{
-        padding: 10px;
-        
-    }
-
-    .div1 h1{
-        text-align: left;
-        }
-
-    .div1 p{
-        text-align: left;
-        font-family: "Lato";
-        font-size: 1.1rem;
-    }
-
-    .div2{
-        display: flex;
         justify-content: space-evenly;
         align-items: center;
-        gap: 30px;
-
+        gap: 20px;
+        width: 100%;
     }
 
-    .div2 img{
-        width: 70%;
-        max-height: 600px;
-        max-width: 800px;
+    .Welcome-content-desktop h1{
+        font-size: 5rem;
+    }
+
+    .Welcome-content-desktop p{
+        padding: 10px;
+        font-size: 1.2rem;
+        width: 90%;
+        border-top: 2px solid ;
+        border-bottom: 1px solid ;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+    }
+    
+    .AboutHotelContainer{
+        display: flex;
+        flex-direction: row;
+    }
+
+    .AboutHotelImageContainer{
+        display: flex;
+        justify-content: space-evenly;
+        width: 50%;
+    }
+    .AboutHotelImgContainerRow2:nth-of-type(1){
+        display: inline-flex;
+    }
+
+    .AboutHotelImgContainerRow1{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+        align-items: center;
+        gap: 20px;
+        padding: 0px;
+    }
+
+    .ImageCircular{
+        width: 400px;
+        height: 400px;
+        box-shadow: -5px 6px 12px rgba(0, 0, 0, 0.651);
+    }
+
+    .ImageCircular img{
+        width: 100%;
+    }
+
+    .AboutHotelImgContainerRow2{
+        width: 40%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        align-items: center;
+        gap: 20px;
+    }
+
+    
+
+
+    .ImageCircular2{
+        width: 150px;
+        height: 150px;
+        box-shadow: -5px 6px 12px rgba(0, 0, 0, 0.651);
+    }
+
+    .AboutHotelContent{
+        width: 50%;
+    }
+
+    .AboutHotelContent button{
+        background-color: white !important;
+        color: #B33951;
+        border-bottom: 1px Solid black;
+        border-radius: 0px;
+    }
+
+    .AboutHotelContent button:hover{
+        background-color: #B33951 !important;
+        color: white;
+        cursor: pointer;
+        border-radius: 10px;
         box-shadow: 0 2px 4px rgba(0, 0, 0, 0.651);
     }
 
-    .div3{
-        display: flex;
-        flex-direction: row;
-        text-align: left;
-        justify-content: space-evenly;
-        align-items: center;
-        gap: 10px;
-        padding: 10px;
-        width: 100%;
-    }
-
-    .div3 p{
-        font-family: "Lato";
-    }
-
-    #Content-underimage-description{
-        display: flex;
-        justify-content: space-between;
-        flex-direction: column;
-        width: 40%;
-        border-radius: 15px;
-        padding: 10px;
-        align-items: center;
-        height: 100%;
-    }
-
-    #ImageDescriptionContainer{
-        padding: 5px;
-        width: 40%;
-        object-fit: cover;
-
-    }
-
-    #ImageDescriptionContainer img{
-        width: 100%;
-        max-width: 600px;
-        object-fit: cover;
-    }
-
-    .div3 p{
-        font-family: "Muli";
-        text-align: center;
-
-    }
-
-    .Featured-rooms{
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        padding: 20px;
-
-    }
-    
-    .Featured-rooms h1{
-        font-family: "FreightBigProBold";
-        font-size: 2rem;
-        color: #000000;
-        text-align: center;
-        margin-bottom: 20px;
-        border: 1px solid red;
-        width: 100%;
-    }
-
-    .Room-list{
-        border-radius: 10px;
-        width: 100%;
-        display: flex;
-        flex-direction: row;
-        justify-content: space-evenly;
-        align-items: center;
-        gap: 15px;
-    }
-
-    .room-content h3{
-        font-family: "FreightBigProBold";
-        font-size: 1.5rem;
-        color: #000000;
-        
-    }
-
-    .room{
-
-        max-width: 500px;
-    }
-
-    .room:hover{
-        transform: scale(1.1);
-        transition: all 0.5s ease-in-out;
-    }
-
-    .room img{
-        width: 100%;
-        object-fit: cover;
-        height: 200px;
-    }
-
-    .room-content p{
-        text-align: center;
-        font-family: "Muli";
-        font-size: 1.1rem;
-        color: #000000;
-    }
-
-    .Featured-rooms button{
-        margin-top: 30px;
-        width: 100%;
-        display: flex;
-        justify-content: center;
-    }
+    /*Services section*/
     .Services-Amenities-Container{
         display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: center;
-        padding: 20px;
+        padding: 10px;
         gap: 20px;
+    }
+
+    .serviceHeader{
+        width: 100%;
+        display: flex;
+
+    }
+
+    .serviceHeader h1{
+        margin-left: 20px;
+        width: 60%;
+        font-family: "FreightBigProBold";
+        font-size: 3rem;
+        color: #B33951;
+        text-align: center;
+        border-bottom: 2px solid rgba(0, 0, 0, 0.205);
+        text-align: left;
+
     }
     
     .Services-Amenities-Content{
@@ -660,14 +617,22 @@ h1{
         flex-direction: column;
         justify-content: center;
         width: 60%;
+        max-width: 900px;
+        max-height: 800px;
+        overflow: hidden;
         align-items: center;
+        object-fit: cover;
+        object-position: center;
         gap: 20px;
-        padding: 20px;
+        
     }
     
     .image-container-services img{
         width: 100%;
-        max-width: 600px;
+        height: 100%;
+        max-width: 1000px;
+        object-fit: cover;
+        object-position: center;
     }
     
     .Services-Amenities-Description{
@@ -681,6 +646,92 @@ h1{
         padding: 20px;
     }
 
+    .Services-Amenities-Description h2{
+        font-family: "FreightBigProBold";
+        font-size: 2rem;
+    }
+
+    .Services-Amenities-Description button{
+        background-color: white !important;
+        color: #B33951;
+        border-bottom: 1px Solid black;
+        border-radius: 0px;
+        transition: 0.7s ease-in-out;
+    }
+    
+    .Services-Amenities-Description button:hover{
+        background-color: #B33951 !important;
+        color: white;
+        cursor: pointer;
+        border-radius: 10px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.651);
+    }
+
+
+
+
+
+    .image-container-services2{
+        display: flex;
+        justify-content: center;
+        width: 60%;
+        align-items: center;
+        gap: 20px;
+        overflow: hidden;
+        max-width: 800px;
+        max-height: 800px;
+    }
+    
+    .image-container-services2 img{
+        width: 100%;
+        max-width: 1000px;
+        object-fit: cover;
+        object-position: center;
+    }
+    
+    .Services-Amenities-Description2{
+        display: flex;
+        flex-direction: column;
+        width: 40%;
+        text-align: center;
+        justify-content: center;
+        align-items: center;
+        gap: 20px;
+        padding: 20px;
+    }
+
+    .Services-Amenities-Content2{
+        display: flex;
+        flex-direction: row-reverse;
+        width: 100%;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .Services-Amenities-Description2 button{
+        background-color: white !important;
+        color: #B33951;
+        border-bottom: 1px Solid black;
+        border-radius: 0px;
+        transition: 0.7s ease-in-out;
+    }
+    
+    .Services-Amenities-Description2 button:hover{
+        background-color: #B33951 !important;
+        color: white;
+        cursor: pointer;
+        border-radius: 10px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.651);
+    }
+
+
+
+
+    .OffersCard{
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.651);
+
+    }
+
     .OffersCard:hover{
         transform: scale(1.05);
         transition: all 0.5s ease-in-out;
@@ -688,5 +739,114 @@ h1{
     }
 
 
+    .Dining-Area-Container{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 20px;
+    }
+
+    .Dining-Area-Content{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+        align-items: center;
+        gap: 20px;
+        width: 100%;
+    }
+
+    .image-container-dining{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        width: 70%;
+        align-items: center;
+    }
+
+    .image-container-dining img{
+        width: 100%;
+        object-fit: cover;
+        height: 100%;
+    }
+
+    .content-btn-cont{
+        width: 60%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 20px;
+
+    }
+
+    .content-btn-cont p{
+        font-size: 1.3rem;
+        max-width: 500px ;
+    }
+
+    
+
+
+    .Nearby-Attraction-Content{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+        align-items: center;
+        gap: 20px;
+        width: 100%;
+    }
+
+    .image-container-attractions{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        width: 60%;
+        align-items: center;
+    }
+
+
+    /*contact us laptop*/
+
+    .ContactUsContainer{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+        align-items: center;
+        gap: 20px;
+    }
+
+    .Contactpic{
+        width: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        
+    }
+
+    .ContactFormContainer{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 20px;
+        width: 50%;
+    }
+
+    .ContactFormContainer button{
+        background-color: #B33951 !important;
+        color: white;
+        border-bottom: 1px Solid black;
+        border-radius: 0px;
+        transition: all 0.7s ease-in-out;
+    }
+
+    .ContactFormContainer button:hover{
+        background-color: white !important;
+        color: #B33951;
+        cursor: pointer;
+        border-radius: 10px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.651);
+    }
 
 }

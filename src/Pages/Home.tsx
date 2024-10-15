@@ -1,6 +1,7 @@
 import '../Css/Home.css'
 import { Link } from 'react-router-dom';
 import VertSearchBar from '@/Components/VerticalSearchbar';
+import '../Css/Searchbar.module.css';
 import SearchBar from '@/Components/SearchBar';
 import { Button } from "@/Components/ui/button";
 import {
@@ -54,68 +55,92 @@ const Home = () => {
             <section className='WelcomeSection'>
                 <div className="Welcome-content">
                     <h1>HavenHub</h1>
-                    <p>Welcome to HavenHub, your sanctuary of luxury and comfort. Experience unparalleled hospitality and exquisite amenities designed to make your stay unforgettable.</p>                    <div id='VerticalSearchBarContainer'>
-                        <VertSearchBar onSearch={handleSearch} />
+                    <p>Your perfect escape starts here.</p>            
+                </div>
+                <div className="Welcome-content-desktop">
+                    <h1>Where Comfort Meets Elegance</h1>
+                    <p>Your perfect escape starts here. Discover luxury, style, and unforgettable experiences at HavenHub </p>
+                </div>
+
+            </section>
+            <section className='AboutHotelSection'>
+                <div className='AboutHotelContainer'>
+                    <div className="AboutHotelImageContainer">
+                        <div className='AboutHotelImgContainerRow2'>
+                            <div className="ImageCircular2">
+                                <img src="../Images/Doorman1-min.jpg" alt="Services and Amenities" />
+                            </div>
+                            <div className="ImageCircular2">
+                                <img src="../Images/OasisLounge1-min.jpg" alt="Services and Amenities" />
+                            </div>
+                            <div className="ImageCircular2">
+                                <img src="../Images/Spa2-min.jpg" alt="Services and Amenities" />
+                            </div>
+                        </div>
+                        <div className='AboutHotelImgContainerRow1'>
+                            <div className="ImageCircular">
+                                <img src="../Images/HotelLobby(Home)-min.jpg" alt="Services and Amenities" />
+                            </div>
+                        </div>
+                        
+                        
                     </div>
-                    
+                    <div className="AboutHotelContent">
+                        <h1>About HavenHub</h1>
+                        <p>Nestled in the heart of the city, HavenHub offers a perfect blend of luxury and comfort. Our elegantly designed rooms and top-notch amenities cater to both leisure and business travelers, ensuring a memorable stay. Enjoy exquisite dining, relax at our rooftop lounge, or rejuvenate in our spa – there's something for everyone.</p>
+                        <p>Discover why HavenHub is more than just a place to stay; it's an experience to savor.</p>
+                        <Button><Link to="/about">Read More about our story and Offerings</Link></Button>
+                    </div>
+
                 </div>
 
             </section>
             
-            <section className='Hotel-hero-section'>
-                <div className="content-section">
-                    <h1>Welcome to HavenHub</h1>
-                    <p>Immerse yourself in unparalleled luxury and exceptional comfort at HavenHub, where modern elegance meets world-class hospitality. From our lavish suites to our bespoke services, every detail is designed to provide you with a refined and unforgettable experience. Whether you're here for business, leisure, or a special occasion, our top-rated hotel offers the perfect retreat for relaxation and indulgence.</p>
-                    <div className="button-Container">
-                        <Button className="Custom-button"><Link to="/rooms">Book Now</Link></Button>
-                        <Button className="Custom-button"><Link to="/rooms">See Our Avaliable Rooms</Link></Button>
+           
+            <section className="Services-Amenities-Container">
+                <div className="AmenitiesRow1">
+                    <div className="serviceHeader">
+                        <h1>Services and Amenities for Our Guests</h1>
                     </div>
-                    <SearchBar onSearch={handleSearch} />
-                    <p>
-                        At HavenHub, we offer an unparalleled experience, 
-                        blending comfort with sophistication. From luxurious 
-                        accommodations to world-class amenities, every detail 
-                        is crafted for your perfect stay.
-                    </p>
-                </div>
-                <div className="Desktop-View">
-                    <div className="div1">
-                        <h1>Welcome to HavenHub</h1>
-                        <p>Immerse yourself in unparalleled luxury and exceptional comfort at HavenHub, where modern elegance meets world-class hospitality. From our lavish suites to our bespoke services, every detail is designed to provide you with a refined and unforgettable experience. Whether you're here for business, leisure, or a special occasion, our top-rated hotel offers the perfect retreat for relaxation and indulgence.</p>
-                        </div>
-                    <div className="div2">
-                        <img src="../Images/OutsideView-min.jpg" alt="Hotel Front Desk" />
-                        <SearchBar onSearch={handleSearch} />
-                    </div>
-                    <div className="div3">
-                        <div id="Content-underimage-description">
-                        <p>At HavenHub, we pride ourselves on offering an unparalleled experience that seamlessly blends comfort with sophistication. Step into a world of refined elegance, where every aspect of your stay is meticulously curated to ensure the highest level of satisfaction. Our luxurious accommodations are designed to provide the ultimate in relaxation, while our world-class amenities cater to your every need, whether you're here for leisure or business. From personalized services to fine dining, rejuvenating spa treatments, and state-of-the-art facilities, every detail is thoughtfully crafted to make your stay not just memorable, but extraordinary. Experience the perfect balance of indulgence and hospitality at HavenHub, where your comfort is our top priority.</p>
-                            <div className="button-Container">
-                                <Button className="Custom-button"><Link to="/rooms">Book Now</Link></Button>
-                                <Button className="Custom-button"><Link to="/rooms">See Our Avaliable Rooms</Link></Button>
+                    <div className="Services-Amenities-Content">
+                        <div className="image-container-services">
+                            <div className="Services-Amenities-Image-left">
+                                <img src="../Images/HavenResturant-min.jpg" alt="Services and Amenities" />
                             </div>
                         </div>
-                        <div id="ImageDescriptionContainer">
-                            <img src="../Images/RelaxArea-min.jpg" alt="Hotel Front Desk" />
+                        <div className="Services-Amenities-Description">
+                            <h2>Savor the Flavors of fine dining</h2>
+                            <p>At HavenHub, dining is more than just a meal—it's an experience. Our world-class restaurants offer a culinary journey that caters to all tastes, featuring dishes crafted by renowned chefs using the freshest local ingredients. Whether you're enjoying a casual breakfast, a business lunch, or an elegant dinner, each dish is designed to delight your palate. Indulge in a range of dining options, from gourmet international cuisine to local specialties, paired with an extensive selection of fine wines. Experience the perfect fusion of flavor, ambiance, and service, making every meal at HavenHub truly unforgettable.</p>
+                            <Button><Link to="/services">Learn More</Link></Button>
                         </div>
                     </div>
-                    
-
                 </div>
-
-            </section>
-            <section className="Services-Amenities-Container">
-                <h1>Services and Amenities for Our Guests</h1>
-                <div className="Services-Amenities-Content">
-                    <div className="image-container-services">
-                        <div className="Services-Amenities-Image-right">
-                            <img src="../Images/Spa2-min.jpg" alt="Services and Amenities" />
+                <div className="AmenitiesRow2">
+                    <div className="Services-Amenities-Content2">
+                        <div className="image-container-services2">
+                            <div className="Services-Amenities-Image-right">
+                                <img src="../Images/Spa2-min.jpg" alt="Services and Amenities" />
+                            </div>
+                        </div>
+                        <div className="Services-Amenities-Description2">
+                            <h2>Where Elegance Meets Unmatched Hospitality</h2>
+                            <p>At HavenHub, we are dedicated to providing our guests with a truly exceptional experience. From the moment you arrive, our team is committed to ensuring your stay is nothing short of perfect. Our range of services and amenities are designed to cater to your every need, whether you're here for business or leisure. From personalized concierge services to fine dining, rejuvenating spa treatments, and state-of-the-art facilities, every detail is crafted to make your stay unforgettable. Discover the perfect blend of luxury and comfort at HavenHub, where your satisfaction is our top priority.</p>
+                            <Button><Link to="/services">Learn More</Link></Button>
                         </div>
                     </div>
-                    <div className="Services-Amenities-Description">
-                        <h1>Where Elegance Meets Unmatched Hospitality</h1>
-                        <p>At HavenHub, we are dedicated to providing our guests with a truly exceptional experience. From the moment you arrive, our team is committed to ensuring your stay is nothing short of perfect. Our range of services and amenities are designed to cater to your every need, whether you're here for business or leisure. From personalized concierge services to fine dining, rejuvenating spa treatments, and state-of-the-art facilities, every detail is crafted to make your stay unforgettable. Discover the perfect blend of luxury and comfort at HavenHub, where your satisfaction is our top priority.</p>
-                        <Button><Link to="/services">Learn More</Link></Button>
+                </div>
+                <div className="AmenitiesRow1">
+                    <div className="Services-Amenities-Content">
+                        <div className="image-container-services">
+                            <div className="Services-Amenities-Image-left">
+                                <img src="../Images/Activites-min.jpg" alt="Services and Amenities" />
+                            </div>
+                        </div>
+                        <div className="Services-Amenities-Description">
+                            <h2>Discover Exciting Activities and Local Attractions</h2>
+                            <p>At HavenHub, the adventure extends beyond the comfort of your room. Whether you're looking to relax or explore, we offer a wide range of activities to suit every interest. Enjoy on-site experiences such as a refreshing swim in our rooftop pool, a workout in the state-of-the-art fitness center, or a rejuvenating spa session. For those eager to explore the local area, our prime location provides easy access to nearby attractions, from historic landmarks and cultural sites to shopping districts and scenic nature trails. Discover endless opportunities for excitement and relaxation, all within reach at HavenHub.</p>
+                            <Button><Link to="/services">Learn More</Link></Button>
+                        </div>
                     </div>
                 </div>
             </section>
@@ -146,49 +171,20 @@ const Home = () => {
                 </div>
                 
             </section>
-            <section className='Dining-Area-Container'>
-                <h1>Dining & Cuisine</h1>
-                <div className="Dining-Area-Content">
-                    <div className="image-container-dining">
-                        <div className="Dining-Area-Image-left">
-                            <img src="../Images/DiningOut-min.jpg" alt="Dining Area" />
-                        </div>
-                    </div>
-                    <p>
-                        Indulge in a culinary journey at HavenHub, where 
-                        exquisite flavors and world-class service come together. 
-                        Our dining options cater to every palate, from elegant fine 
-                        dining experiences to casual poolside refreshments. Discover 
-                        delicious cuisine crafted with the freshest ingredients, 
-                        ensuring every meal is a memorable one. Learn more about our 
-                        dining experiences and see what's on the menu.
-                    </p>
-                    <Button><Link to="/dining">Explore Dining Options</Link></Button>
+            <section className='ContactUsSection'>
+                <div className="ContactUsContainer">
+                <div className="Contactpic">
+                    <img src="../Images/Amenities1-min.jpg" alt="Contact Us" />
                 </div>
-            </section>
-            <section className='Nearby-Attraction-container'>
-                <h1>Explore Nearby Attractions & Activities</h1>
-                <div className="Nearby-Attraction-Content">
-                    <div className="image-container-attractions">
-                        <div className="Nearby-Attraction-Image-right">
-                            <img src="../Images/Amenities1-min.jpg" alt="Nearby Attractions" />
-                        </div>
-                    </div>
-                    <div className="Nearby-Attraction-Description">
-                        <p>
-                            Discover the vibrant surroundings of HavenHub, where 
-                            endless adventures await. From cultural landmarks to 
-                            outdoor excursions, our hotel is conveniently located 
-                            near a variety of attractions and activities. Explore 
-                            the local area, discover hidden gems, and immerse 
-                            yourself in the beauty of your surroundings. Whether 
-                            you're seeking relaxation or adventure, there's 
-                            something for everyone to enjoy.
-                        </p>
-                        <Button><Link to="/attractions">Explore Nearby Attractions</Link></Button>
-                    </div>
+                <div className="ContactFormContainer">
+                    <h1>Contact Us</h1>
+                    <p>Have a question or need assistance? Our team is here to help. Contact us today and we'll get back to you as soon as possible.</p>
+                    <Button><Link to="/">Get In Touch</Link></Button>
                 </div>
+                </div>
+
             </section>
+           
         </div>
     )
 }

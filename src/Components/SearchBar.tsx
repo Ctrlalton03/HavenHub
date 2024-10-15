@@ -1,5 +1,5 @@
 import { useState } from "react";
-import '../Css/Searchbar.module.css';
+import styles from '../Css/Searchbar.module.css';
 import { Button } from "@/Components/ui/button";
 import { Input } from "./ui/input";
 import { Label } from "./ui/label";
@@ -29,9 +29,9 @@ const SearchBar :React.FC<SearchBarProps> = ({onSearch}) => {
     };
 
     return (
-    <form className="search-bar" onSubmit={handleSubmit}>
+    <form className={styles.searchbar} onSubmit={handleSubmit}>
         <h1>Search For Rooms</h1>
-        <div className="form-input">
+        <div className={styles.formInput}>
         <Label htmlFor="CheckInDate">Check-In Date</Label>
         <Input
         type="text"
@@ -43,7 +43,7 @@ const SearchBar :React.FC<SearchBarProps> = ({onSearch}) => {
         required
         />
         </div>
-        <div className="form-input">
+        <div className={styles.formInput}>
         <Label htmlFor="CheckOutDate">Check-Out Date</Label>
         <Input
         type="text"
@@ -55,7 +55,7 @@ const SearchBar :React.FC<SearchBarProps> = ({onSearch}) => {
         required
         />
         </div>
-        <div className="form-input">
+        <div className={styles.formInput}>
         <Label htmlFor="Guests">Guests</Label>
         <Input
             type="number"
