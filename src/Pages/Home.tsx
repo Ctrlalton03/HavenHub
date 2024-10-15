@@ -1,8 +1,6 @@
 import '../Css/Home.css'
 import { Link } from 'react-router-dom';
-import VertSearchBar from '@/Components/VerticalSearchbar';
 import '../Css/Searchbar.module.css';
-import SearchBar from '@/Components/SearchBar';
 import { Button } from "@/Components/ui/button";
 import {
     Card,
@@ -45,9 +43,7 @@ const OffersPackages = [
 
 const Home = () => {
 
-    const handleSearch = (searchData : {checkInDate: string; checkOutDate: string; guests: number }) => {
-        console.log("Search Data: ",searchData);
-    }
+    
 
     return (
         <div>
