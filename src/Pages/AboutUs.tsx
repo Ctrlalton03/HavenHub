@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom';
 
 const AboutUs = () => {
 
-    const sectionsRef = useRef([])
+    const sectionsRef = useRef<(HTMLDivElement | null)[]>([]);
 
     useEffect(() => {
         const callback = (entries: IntersectionObserverEntry[]) => {
