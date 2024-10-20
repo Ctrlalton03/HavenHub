@@ -1,0 +1,253 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap");
+
+@font-face {
+    font-family: "FreightBigProBold";
+    src: url('./Fonts/FreightBigProBold.ttf');
+}
+@font-face {
+    font-family: "FreightBigProBook";
+    src: url('./Fonts/FreightBigProBook.ttf');
+}
+@font-face {
+    font-family: "FreightBigProMedium";
+    src: url('./Fonts/FreightBigProMedium.ttf');
+}
+@font-face {
+    font-family: "FreightBigProLight";
+    src: url('./Fonts/FreightBigProLight.ttf');
+}
+@font-face{
+    font-family: "Muli";
+    src: url('./Fonts/Muli.ttf');
+}
+
+
+
+.AboutUsPageContainer{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    padding: 20px;
+    font-family: "Lato";
+}
+
+
+
+.AboutUsPageContentContainer{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    gap: 10px;
+}
+
+.WelcomeHeader{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    margin:20px;
+}
+
+.WelcomeContent{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+.WelcomeHeader h1{
+    font-size: 2rem;
+    font-weight: 700;
+    color: #b33951;
+}
+
+.WelcomeHeader p{
+    width:90%;
+    font-size: 1rem;
+    font-weight: 400;
+    color: #000000;
+}
+/*CommitmentList-mobile*/
+.CommitmentList{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+.CommitmentListContent{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    padding: 10px;
+    box-shadow: 0px 0px 10px 0px #00000079;
+    border-radius: 10px;
+}
+
+.CommitmentList h2{
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #b33951;
+
+}
+
+.CommitmentList h3{
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: #b33951;
+
+}
+.CommitmentList p{
+    width:90%;
+    font-size: 1rem;
+    font-weight: 400;
+    color: #000000;
+}
+
+/*OurStory area-mobile*/
+.OurStoryContainer{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+.OurStoryContainer h1 {
+    font-size: 2rem;
+    font-weight: 700;
+    color: #b33951;
+}
+
+.WhyHavenHubContainer h2{
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #b33951;
+
+}
+
+.WhyHavenHubContainer h3{
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: #b33951;
+}
+
+/*ServiceSection-mobile*/
+
+.OurServices h1{
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #b33951;
+}
+
+
+
+/*VisionsContainer-mobile*/
+.OurVisionContainer h1{
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #b33951;
+}
+
+
+
+/*ConnectWithUs-mobile*/
+
+
+.ConnectContainer{
+    width: 100%;
+}
+
+.ConnectContainer h1{
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #b33951;
+}
+
+
+
+
+
+
+
+.fade-in {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+/* When the element is visible, apply the fade-in */
+.fade-in-visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+@media screen and (min-width: 768px) {
+    .AboutUsPageContainer{
+        border: 1px solid red;
+    }
+
+    .WelcomeHeader{
+        width: 100%;
+        display: flex;
+        flex-direction: row-reverse;
+    }
+
+
+    .ImageBreaker{
+        max-width: 800px;
+        overflow: hidden;
+    }
+
+    .ImageBreaker img{
+        width: 100%;
+        height: auto;
+        object-fit: cover;
+        object-position: center;
+        box-shadow: 2px ;
+    }
+
+    /*Commitment List Laptop Size*/
+    .CommitmentList{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: center;
+        gap: 10px;
+    }
+
+    .CommitmentListContent{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 10px;
+        padding: 10px;
+        width: 50%;
+        box-shadow: none;
+    }
+
+    .ImageContainerTowels{
+        width: 50%;
+        overflow: hidden;
+
+    }
+
+    .ImageContainerTowels img{
+        max-width: 500px;
+        width: 100%;
+        height: auto;
+        object-fit: cover;
+        object-position: center;
+        box-shadow: 2px ;
+    }
+}
