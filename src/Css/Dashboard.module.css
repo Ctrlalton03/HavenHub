@@ -1,0 +1,26 @@
+
+
+
+.Dashboard{
+    border: 1px solid red;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+.Dashboard h1{
+    font-size: 2rem;
+    font-family: "FreightBigProBook";
+    color: #b33951;
+}
+
+
+
+.dashboardContent{
+    border: 1px solid blue;
+    padding: 10px;
+}

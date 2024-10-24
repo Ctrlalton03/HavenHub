@@ -180,6 +180,9 @@ const Home = () => {
                 </div>
 
             </section>
+            <footer className="dashboard-footer">
+                <p>&copy; 2024 HavenHub. All rights reserved.</p>
+            </footer>
            
         </div>
     )

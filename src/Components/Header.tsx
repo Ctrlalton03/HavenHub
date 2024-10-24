@@ -34,7 +34,7 @@ const Header = () => {
         </div>
       
         <div className="signup">
-          <Link to="/SignIn_Up">Sign Up</Link>
+          <Link to="/SignUpForm">Sign Up</Link>
         </div>
         <div className="desktop-header-container">
         <div className="logoContainer-desktop">
@@ -51,7 +51,7 @@ const Header = () => {
             <li><Link to="/rooms" onClick={toggleMenu}>Rooms</Link></li>
             <li><Link to="/About" onClick={toggleMenu}>About Us</Link></li>
             <li><Link to="/contact" onClick={toggleMenu}>Contact Us</Link></li>
-            <li id="signup-desktop-link"><Link to ="/SignIn_Up" onClick={toggleMenu}>Sign Up</Link></li>
+            <li id="signup-desktop-link"><Link to ="/SignUpForm" onClick={toggleMenu}>Sign Up</Link></li>
           </ul>
         </div>
 
