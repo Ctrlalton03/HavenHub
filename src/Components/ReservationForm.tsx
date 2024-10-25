@@ -11,8 +11,10 @@ interface ReservationFormProps {
     const [checkInDate, setCheckInDate] = useState<string>('');
     const [checkOutDate, setCheckOutDate] = useState<string>('');
     const [roomType, setRoomType] = useState<string>('standard');
+
+    
   
-    const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+    const handleSubmit = async(e: React.FormEvent<HTMLFormElement>) => {
       e.preventDefault();
 
         const newBooking = {
@@ -21,13 +23,19 @@ interface ReservationFormProps {
             checkOutDate,
         };
         
-        addBooking(newBooking);
-
-        setCheckInDate('');
-        setCheckOutDate('');
-        setRoomType('standard');
-
-    };
+        try {
+          // Await the addBooking call to ensure it completes before clearing the form
+          await addBooking(newBooking);
+          console.log("Booking successfully added");
+      
+          // Clear form fields after successful booking
+          setCheckInDate('');
+          setCheckOutDate('');
+          setRoomType('standard');
+        } catch (error) {
+          console.error("Failed to add booking:", error);
+        }
+      };
 
 
 
@@ -35,7 +43,6 @@ interface ReservationFormProps {
 
     return (
         <>
-        <img src="https://images.unsplash.com/photo-1606780000000-3b3b3e3b3b3b" alt="hotel room" className="hotel-room-image" />
          <form className="reservation-form" onSubmit={handleSubmit}>
         <Label htmlFor="checkin-date">Check-In Date:</Label>
         <Input 

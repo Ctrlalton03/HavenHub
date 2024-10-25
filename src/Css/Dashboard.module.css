@@ -23,4 +23,38 @@
 .dashboardContent{
     border: 1px solid blue;
     padding: 10px;
+    display: flex;
+    flex-direction: column;
+    row-gap: 10px;
 }
+
+.dashboardBookingsContainer{
+    border: 2px solid rgb(0, 0, 0);
+    border-radius: 10px;
+    padding: 10px;
+    box-shadow: 0 10px 10px rgba(0, 0, 0, 0.541);
+    margin: 10px;
+}
+
+.dashboardBookingsContainer h2{
+    font-size: 1.5rem;
+    font-family: "FreightBigProBook";
+    color: #b33951;
+}
+
+.dashboardBookingsContainer p{
+    font-size: 1.2rem;
+    font-family: "FreightBigProBook";
+    color: #000000;
+}
+
+.dashboardReservation{
+    border: 2px solid black;
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: 0 10px 10px rgba(0, 0, 0, 0.541);
+
+}
+
+
+

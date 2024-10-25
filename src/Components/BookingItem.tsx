@@ -1,18 +1,32 @@
 import React from 'react';
+import { Button } from "@/Components/ui/button";
+import { Card, CardContent, CardHeader, CardTitle } from "@/Components/ui/card"
+import styles from "@/Css/BookingItem.module.css";
+
 
 interface BookingItemProps {
   roomType: string;
   checkIn: string;
   checkOut: string;
+  onRemove: () => void;
 }
 
-const BookingItem: React.FC<BookingItemProps> = ({ roomType, checkIn, checkOut }) => {
+const BookingItem: React.FC<BookingItemProps> = ({ roomType, checkIn, checkOut, onRemove }) => {
+
+
+  
   return (
     <div className="booking-item">
-      <p>Room: {roomType}</p>
-      <p>Check-in: {checkIn}</p>
-      <p>Check-out: {checkOut}</p>
-      <button className="manage-btn">Manage Booking</button>
+      <Card className={styles.CardContainer}>
+        <CardHeader className={styles.CardHeaderContainer}>
+          <CardTitle>Room: {roomType}</CardTitle>
+        </CardHeader>
+        <CardContent>
+          <p>Check-in: {checkIn}</p>
+          <p>Check-out: {checkOut}</p>
+        </CardContent>
+        <Button className="remove-btn" onClick={onRemove}>Remove</Button>
+      </Card>
     </div>
   );
 };

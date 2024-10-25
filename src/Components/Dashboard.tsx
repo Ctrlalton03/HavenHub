@@ -1,58 +1,150 @@
-
 import styles from "../Css/Dashboard.module.css";
 import BookingItem from "./BookingItem";
 import ReservationForm from "./ReservationForm";
 import HotelServices from "./HotelServices";
 import { useEffect, useState } from "react";
-import { getAuth } from "firebase/auth";
+import { getAuth, onAuthStateChanged } from "firebase/auth";
 import { useLocation } from "react-router-dom";
+import { getFirestore, collection, addDoc, getDocs, query, where, deleteDoc, doc } from "firebase/firestore";
 
-const dashboard = () => {
+const Dashboard = () => {
+  const [username, setUsername] = useState("");
+  const [isAuthenticated, setIsAuthenticated] = useState(false);
+  const [userId, setUserId] = useState(""); // Add this to store the user ID
+  const location = useLocation();
+  const { state } = location;
+  const [bookings, setBookings] = useState<any[]>([]);
+  const db = getFirestore();
 
-    const [username, setUsername] = useState("");
-    const location = useLocation();
-    const {state} = location;
-    const [bookings, setBookings] = useState<any[]>([]);
+  useEffect(() => {
+    const auth = getAuth();
+    onAuthStateChanged(auth, (user) => {
+      if (user) {
+        setUsername(user.displayName || state?.username);
+        setUserId(user.uid); // Store the user ID
+        setIsAuthenticated(true);
+        fetchBookings(user.uid);
+      } else {
+        setIsAuthenticated(false);
+        setUserId("");
+        setBookings([]);
+      }
+    });
+  }, [state?.username]);
+
+  // Function to add a new booking
+  const addBooking = async (newBooking: any) => {
+    const auth = getAuth();
+    const user = auth.currentUser;
     
-    useEffect(() => {
-        const auth = getAuth();
-        const user = auth.currentUser;
+    if (!user) {
+      console.error("No authenticated user found");
+      return;
+    }
 
-        // If there is a new booking, add it to the list of bookings
-        if (state?.newBooking) {
-            setBookings((prevBookings) => [...prevBookings, state.newBooking]);
-        }
+    try {
+      // Save the booking to Firestore with proper user identification
+      const bookingData = {
+        userId: user.uid,
+        username: username,
+        timestamp: new Date().toISOString(),
+        status: 'active',
+        ...newBooking
+      };
 
-        // Set the username if it is passed in the state or from the current user
-        if (user) {
-            setUsername(user.displayName || "User");
-        }
-    }, [state]);
+      const docRef = await addDoc(collection(db, "bookings"), bookingData);
 
-    // Function to add a new booking
-    const addBooking = (newBooking: any) => {
-        setBookings((prevBookings) => [...prevBookings, newBooking]);
-    };
+      // Update local state
+      setBookings((prevBookings) => [
+        ...prevBookings,
+        { id: docRef.id, ...bookingData }
+      ]);
+      
+      console.log("Booking added successfully with ID:", docRef.id);
+      return docRef.id; // Return the ID for confirmation
+      
+    } catch (error) {
+      console.error("Error adding booking: ", error);
+      throw error; // Propagate error to handle it in the form
+    }
+  };
 
+  // Function to fetch bookings from Firestore
+  const fetchBookings = async (userId: string) => {
+    if (!userId) {
+      console.error("No user ID provided for fetching bookings");
+      return;
+    }
+
+    try {
+      const q = query(
+        collection(db, "bookings"),
+        where("userId", "==", userId),
+        where("status", "==", "active")
+      );
+
+      const querySnapshot = await getDocs(q);
+      const fetchedBookings = querySnapshot.docs.map((doc) => ({
+        id: doc.id,
+        ...doc.data(),
+      }));
+
+      setBookings(fetchedBookings);
+    } catch (error: any) {
+      if (error.code === "permission-denied") {
+        console.error("You don't have permission to access these bookings.");
+      } else {
+        console.error("Error fetching bookings: ", error);
+      }
+    }
+  };
+
+  // Function to remove a booking from Firestore
+  const removeBooking = async (index: number) => {
+    const bookingToRemove = bookings[index];
     
+    if (!bookingToRemove?.id) {
+      console.error("No booking ID found for removal");
+      return;
+    }
 
-    return (
-        <div className={styles.Dashboard}>
-            <header className="dashboard-header">
-                <h1>Welcome, {username}</h1>
-            </header>
+    try {
+      // Instead of deleting, update the status to 'cancelled'
+      const bookingRef = doc(db, "bookings", bookingToRemove.id);
+      await deleteDoc(bookingRef);
+      
+      setBookings((prevBookings) => 
+        prevBookings.filter((_, i) => i !== index)
+      );
+      
+      console.log("Booking removed successfully");
+    } catch (error) {
+      console.error("Error removing booking: ", error);
+      throw error;
+    }
+  };
 
-            <main className={styles.dashboardContent}>
+  if (!isAuthenticated) {
+    return <p>Please sign in to access your dashboard.</p>;
+  }
+  return (
+    <div className={styles.Dashboard}>
+      <header className="dashboard-header">
+        <h1>Welcome, {username || "guest"}</h1>
+      </header>
+
+      <main className={styles.dashboardContent}>
         {/* Current Bookings Section */}
-        <section className="dashboard-section current-bookings">
+        <section className={styles.dashboardBookingsContainer}>
           <h2>Current Bookings</h2>
           {bookings.length > 0 ? (
             bookings.map((booking, index) => (
               <BookingItem
-                key={index}
+                key={booking.id}
                 roomType={booking.roomType}
                 checkIn={booking.checkInDate}
                 checkOut={booking.checkOutDate}
+                onRemove={() => removeBooking(index)}
               />
             ))
           ) : (
@@ -61,9 +153,9 @@ const dashboard = () => {
         </section>
 
         {/* Make a New Reservation Section */}
-        <section className="dashboard-section new-reservation">
+        <section className={styles.dashboardReservation}>
           <h2>Make a New Reservation</h2>
-          <ReservationForm addBooking={addBooking} />
+          <ReservationForm addBooking={addBooking}  />
         </section>
 
         {/* Hotel Services Section */}
@@ -75,16 +167,19 @@ const dashboard = () => {
         {/* Contact and Support Section */}
         <section className="dashboard-section support">
           <h2>Contact & Support</h2>
-          <p>If you need help, please visit our <a href="#">Help Center</a> or <a href="#">Contact Support</a>.</p>
+          <p>
+            If you need help, please visit our <a href="#">Help Center</a> or{" "}
+            <a href="#">Contact Support</a>.
+          </p>
         </section>
       </main>
 
       <footer className="dashboard-footer">
         <p>&copy; 2024 HavenHub. All rights reserved.</p>
       </footer>
-        </div>
-    )
+    </div>
+  );
+};
 
-}
 
-export default dashboard;
+export default Dashboard;
