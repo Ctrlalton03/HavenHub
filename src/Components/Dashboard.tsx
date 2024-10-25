@@ -37,7 +37,7 @@ const Dashboard = () => {
     const auth = getAuth();
     const user = auth.currentUser;
     
-    if (!user) {
+    if (!userId || !user) {
       console.error("No authenticated user found");
       return;
     }
