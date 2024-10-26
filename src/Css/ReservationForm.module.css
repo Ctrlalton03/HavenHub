@@ -1,0 +1,105 @@
+
+
+.ReservationCardContainer{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid #e0e0e0;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 100%;
+}
+
+.imgContainer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    padding: 10px;
+    object-fit: cover;
+
+}
+
+.CardContent{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    width: 100%;
+}
+
+.imgContainer img{
+    max-width: 300px;
+    max-height: 200px;
+    
+    border-radius: 10px;
+
+}
+
+.FormContainer{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    padding: 10px;
+
+}
+
+.RoomTypeSelector{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    width: 100%;
+    padding: 10px;
+}
+
+.RoomTypeSelector select{
+    font-family: "FreightBigProMedium";
+    font-size: 1.2rem;
+    color: #000000;
+    padding: 10px;
+    width: 100%;
+    border-radius: 10px;
+}
+
+.CheckContainer{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    width: 100%;
+    padding: 10px;
+    text-align: center;
+}
+
+.CheckContainer input{
+    font-family: "FreightBigProMedium";
+    font-size: 1.2rem;
+    color: #000000;
+    padding: 10px;
+    width: 100%;
+    border-radius: 10px;
+    border: 1px solid #e0e0e0;
+}
+
+.FormContainer .button{
+    font-family: "FreightBigProMedium";
+    font-size: 1.2rem;
+    color: #F1F7ED;
+    background-color: #B33951;
+    padding: 10px;
+    width: 90%;
+    margin: 10px;
+    margin-bottom: 10px ;
+    text-align: center;
+    border-radius: 10px;
+    border: none;
+    transition: all 0.5s ease-in-out;
+}
+

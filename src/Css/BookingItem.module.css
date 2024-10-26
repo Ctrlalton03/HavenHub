@@ -29,6 +29,7 @@
     justify-content: center;
     align-items: center;
     padding: 10px;
+    width: 100%;
 }
 
 .CardContainer button{
@@ -50,4 +51,38 @@
     color: #B33951;
     box-shadow: 0 10px 10px rgba(0, 0, 0, 0.541);
     cursor: pointer;
+}
+
+#RoomHeader{
+    font-family: "Lato";
+    font-weight: 600;
+    font-size: 2rem;
+    color: black;
+}
+
+#RoomStyles{
+    font-family: "FreightBigProBook";
+    font-weight: 400;
+    font-size: 2rem;
+    color: #B33951;
+}
+
+.checkInContainer{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+}
+
+.checkInContainer h2{
+    font-family: "FreightBigProBook";
+    font-size: 1.5rem;
+    color: #B33951;
+}
+
+.checkInContainer h1{
+    font-family: "Lato";
+    font-size: 1.6rem;
+    color: #000000;
 }

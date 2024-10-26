@@ -6,6 +6,8 @@ import { useEffect, useState } from "react";
 import { getAuth, onAuthStateChanged } from "firebase/auth";
 import { useLocation } from "react-router-dom";
 import { getFirestore, collection, addDoc, getDocs, query, where, deleteDoc, doc } from "firebase/firestore";
+import { Link } from "react-router-dom";
+
 
 const Dashboard = () => {
   const [username, setUsername] = useState("");
@@ -33,7 +35,7 @@ const Dashboard = () => {
   }, [state?.username]);
 
   // Function to add a new booking
-  const addBooking = async (newBooking: any) => {
+  const addBooking = async (newBooking: { roomType: string; checkInDate: string; checkOutDate: string }) => {
     const auth = getAuth();
     const user = auth.currentUser;
     
@@ -61,7 +63,7 @@ const Dashboard = () => {
       ]);
       
       console.log("Booking added successfully with ID:", docRef.id);
-      return docRef.id; // Return the ID for confirmation
+      return; // Return void for confirmation
       
     } catch (error) {
       console.error("Error adding booking: ", error);
@@ -125,7 +127,7 @@ const Dashboard = () => {
   };
 
   if (!isAuthenticated) {
-    return <p>Please sign in to access your dashboard.</p>;
+    return <p>Please <Link to="/SignUpForm">Sign In</Link> to access your dashboard.</p>;
   }
   return (
     <div className={styles.Dashboard}>

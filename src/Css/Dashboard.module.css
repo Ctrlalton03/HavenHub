@@ -2,7 +2,6 @@
 
 
 .Dashboard{
-    border: 1px solid red;
     width: 100%;
     height: 100%;
     display: flex;
@@ -25,6 +24,8 @@
     display: flex;
     flex-direction: column;
     row-gap: 10px;
+    justify-content: center;
+    align-items: center;
 }
 
 .dashboardBookingsContainer{
@@ -52,6 +53,7 @@
 }
 
 .dashboardReservation{
+    width: 90%;
     border: 2px solid black;
     padding: 10px;
     border-radius: 10px;
@@ -59,5 +61,38 @@
 
 }
 
+.dashboardReservation h2{
+    font-size: 2rem;
+    font-family: "FreightBigProBook";
+    color: #b33951;
+    width: 100%;
+    text-align: center;
+}
 
 
+
+
+
+@media screen and (min-width: 768px){
+    .Dashboard{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+    }
+    
+
+    .dashboardContent{
+        flex-direction: row;
+        column-gap: 10px;
+    }
+
+    .dashboardBookingsContainer{
+        width: 40%;
+    }
+
+    .dashboardReservation{
+        width: 40%;
+    }
+    
+}

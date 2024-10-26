@@ -1,18 +1,60 @@
 import { Input } from "@/Components/ui/input";
 import { Label } from "@/Components/ui/label";
 import {useState} from 'react';
+import {
+  Select,
+  SelectContent,
+  SelectItem,
+  SelectTrigger,
+  SelectValue,
+} from "@/Components/ui/select"
+import { Card, CardHeader, CardContent, } from "./ui/card";
+import { Button } from "./ui/button";
+import styles from "@/Css/ReservationForm.module.css";
 
 
 interface ReservationFormProps {
-    addBooking: (booking: { roomType: string; checkInDate: string; checkOutDate: string }) => void;
-  }
+  addBooking: (booking: { 
+    roomType: string; 
+    checkInDate: string; 
+    checkOutDate: string 
+  }) => Promise<void>;
+}
+
+interface RoomType {
+  value: string;
+  label: string;
+  image: string;
+  price: string;
+}
   
   const ReservationForm: React.FC<ReservationFormProps> = ({ addBooking }) => {
     const [checkInDate, setCheckInDate] = useState<string>('');
     const [checkOutDate, setCheckOutDate] = useState<string>('');
     const [roomType, setRoomType] = useState<string>('standard');
 
+    const roomTypes: RoomType[] = [
+      {
+        value: 'Standard',
+        label: 'Standard Room',
+        image: 'Images/Room1-min.jpg',
+        price: '$100/night'
+      },
+      {
+        value: 'Deluxe',
+        label: 'Deluxe Suite',
+        image: 'Images/Room2-min.jpg',
+        price: '$200/night'
+      },
+      {
+        value: 'Executive',
+        label: 'Executive Suite',
+        image: 'Images/Room3-min.jpg',
+        price: '$300/night'
+      }
+    ];
     
+    const selectedRoom = roomTypes.find(room => room.value === roomType) || roomTypes[0];
   
     const handleSubmit = async(e: React.FormEvent<HTMLFormElement>) => {
       e.preventDefault();
@@ -43,40 +85,62 @@ interface ReservationFormProps {
 
     return (
         <>
-         <form className="reservation-form" onSubmit={handleSubmit}>
-        <Label htmlFor="checkin-date">Check-In Date:</Label>
-        <Input 
-        type="date" 
-        id="checkin-date" 
-        name="checkin-date" 
-        value={checkInDate}
-        onChange={(e) => setCheckInDate(e.target.value)}
-        required />
-  
-        <Label htmlFor="checkout-date">Check-Out Date:</Label>
-        <Input 
-        type="date" 
-        id="checkout-date" 
-        name="checkout-date" 
-        value={checkOutDate}
-        onChange={(e) => setCheckOutDate(e.target.value)}
-        required />
-  
-        <Label htmlFor="room-type">Room Type:</Label>
-        <select 
-        id="room-type" 
-        name="room-type"
-        value={roomType}
-        onChange={(e) => setRoomType(e.target.value)}
-        required
-        >
-          <option value="Standard">Standard Room</option>
-          <option value="Deluxe">Deluxe Suite</option>
-          <option value="Executive">Executive Suite</option>
-        </select>
-  
-        <button type="submit" className="reserve-btn">Book Now</button>
-      </form>
+        <Card className={styles.ReservationCardContainer}>
+          <CardHeader>
+            <h1>Reservation Form</h1>
+          </CardHeader>
+          <CardContent className={styles.CardContent}>
+            <div className={styles.imgContainer}>
+              {/*Card Image */}
+              <img src={selectedRoom.image} alt={selectedRoom.label} />
+            </div>
+            <form onSubmit={handleSubmit} className={styles.FormContainer}>
+              <div className={styles.RoomTypeSelector}>
+                <Label htmlFor="roomType">Room Type</Label>
+                <Select
+                  value={roomType}
+                  onValueChange={setRoomType}
+                >
+                  <SelectTrigger>
+                    <SelectValue placeholder="Select a Room Type" />
+                  </SelectTrigger>
+                  <SelectContent>
+                    {roomTypes.map(room => (
+                      <SelectItem key={room.value} value={room.value}>
+                        {room.label} - {room.price}
+                      </SelectItem>
+                    ))}
+                  </SelectContent>
+                </Select>
+              </div>
+              <div className={styles.CheckContainer}>
+                <div>
+                  <Label htmlFor="checkInDate">Check-in Date</Label>
+                  <Input
+                    type="date"
+                    id="checkInDate"
+                    name="checkInDate"
+                    value={checkInDate}
+                    onChange={(e) => setCheckInDate(e.target.value)}
+                    required
+                  />
+                </div>
+                <div>
+                <Label htmlFor="checkout-date">Check-Out Date</Label>
+                <Input
+                  type="date"
+                  id="checkout-date"
+                  name="checkout-date"
+                  value={checkOutDate}
+                  onChange={(e) => setCheckOutDate(e.target.value)}
+                  required
+                />
+                </div>
+              </div>
+              <Button type="submit" className={styles.button}>Book Now</Button>
+            </form>
+          </CardContent>
+        </Card>
         </>
      
     );
