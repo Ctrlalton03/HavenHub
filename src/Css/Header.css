@@ -115,6 +115,19 @@ nav ul li a{
     flex-direction: column;
   }
 
+  .auth-buttons{
+    display: flex;
+    gap: 10px;
+  }
+
+  .auth-buttons Button{
+    background-color: #B33951;
+  }
+
+  .auth-actions{
+    display: flex;
+    gap: 10px;
+  }
 
 @media (max-width: 768px) {
     .nav-links {
@@ -243,5 +256,10 @@ nav ul li a{
       color: #B33951;
       cursor: pointer;
     }
+    
+    .auth-buttons{
+      display: none;
+    }
+
     
   }

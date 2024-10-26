@@ -31,7 +31,7 @@ interface ReservationFormProps {
           // Clear form fields after successful booking
           setCheckInDate('');
           setCheckOutDate('');
-          setRoomType('standard');
+          setRoomType('Standard');
         } catch (error) {
           console.error("Failed to add booking:", error);
         }
@@ -70,9 +70,9 @@ interface ReservationFormProps {
         onChange={(e) => setRoomType(e.target.value)}
         required
         >
-          <option value="standard">Standard Room</option>
-          <option value="deluxe">Deluxe Suite</option>
-          <option value="executive">Executive Suite</option>
+          <option value="Standard">Standard Room</option>
+          <option value="Deluxe">Deluxe Suite</option>
+          <option value="Executive">Executive Suite</option>
         </select>
   
         <button type="submit" className="reserve-btn">Book Now</button>

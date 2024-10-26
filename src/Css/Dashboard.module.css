@@ -21,7 +21,6 @@
 
 
 .dashboardContent{
-    border: 1px solid blue;
     padding: 10px;
     display: flex;
     flex-direction: column;
@@ -34,6 +33,10 @@
     padding: 10px;
     box-shadow: 0 10px 10px rgba(0, 0, 0, 0.541);
     margin: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
 .dashboardBookingsContainer h2{

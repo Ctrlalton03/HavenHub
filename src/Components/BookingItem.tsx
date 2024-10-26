@@ -19,9 +19,11 @@ const BookingItem: React.FC<BookingItemProps> = ({ roomType, checkIn, checkOut, 
     <div className="booking-item">
       <Card className={styles.CardContainer}>
         <CardHeader className={styles.CardHeaderContainer}>
-          <CardTitle>Room: {roomType}</CardTitle>
+          <img src="/Images/Bedroom_1.jpg" alt="Room" />
         </CardHeader>
-        <CardContent>
+        <CardContent className={styles.CardContentContainer}>
+          <h1 id={styles.RoomStylesHeader}>Room Style</h1>
+          <CardTitle>{roomType}</CardTitle>
           <p>Check-in: {checkIn}</p>
           <p>Check-out: {checkOut}</p>
         </CardContent>
