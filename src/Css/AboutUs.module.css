@@ -193,7 +193,7 @@
 
 @media screen and (min-width: 768px) {
     .AboutUsPageContainer{
-        border: 1px solid red;
+        border: none;
     }
 
     .WelcomeHeader{
