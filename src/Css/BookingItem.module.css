@@ -7,6 +7,7 @@
     justify-content: center;
     align-items: center;
     margin-bottom: 10px;
+    box-shadow: 0 10px 10px rgba(0, 0, 0, 0.541) !important;
 }
 
 
@@ -85,4 +86,70 @@
     font-family: "Lato";
     font-size: 1.6rem;
     color: #000000;
+}
+
+@media screen and (min-width: 768px) {
+
+    .CardimgContentContainer{
+        display: flex;
+        width: 100%;
+        height: 70%;
+        padding: 10px;
+    }
+    .CardContainer {
+        height: 40vh;
+        flex-direction: column;
+        margin: 20px 0;
+    }
+
+    .CardHeaderContainer {
+        height: 100%;
+        width: 50%;
+        border-bottom: none;
+        border-right: 1px solid #F1F7ED;
+    }
+
+    .CardHeaderContainer img {
+        height: 100%;
+        width: 100%;
+        object-fit: cover;
+        border-radius: 10px;
+    }
+
+    .CardContentContainer {
+        height: 100%;
+        width: 50%;
+        justify-content: space-between;
+    }
+
+    .checkInContainer {
+        height: auto;
+        flex-direction: row;
+        gap: 20px;
+        padding: 0;
+    }
+
+    .CardContainer button {
+        width: 60%;
+        margin: 20px 0;
+        font-size: 1.1rem;
+    }
+
+    #RoomHeader {
+        font-size: 1.2rem;
+    }
+
+    #RoomStyles {
+        font-size: 1.6rem;
+    }
+
+    .checkInContainer h2 {
+        font-size: 1rem;
+    }
+
+    .checkInContainer h1 {
+        font-size: 0.85rem;
+    }
+
+    
 }

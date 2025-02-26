@@ -19,6 +19,7 @@ const BookingItem: React.FC<BookingItemProps> = ({ roomType, checkIn, checkOut, 
   return (
     <div className="booking-item">
       <Card className={styles.CardContainer}>
+        <div className={styles.CardimgContentContainer}>
         <CardHeader className={styles.CardHeaderContainer}>
           <img src="/Images/Bedroom_1.jpg" alt="Room" />
         </CardHeader>
@@ -34,6 +35,7 @@ const BookingItem: React.FC<BookingItemProps> = ({ roomType, checkIn, checkOut, 
             <h1>{checkOut}</h1>
           </div>
         </CardContent>
+        </div>
         <Button className="remove-btn" onClick={onRemove}>Remove</Button>
       </Card>
     </div>

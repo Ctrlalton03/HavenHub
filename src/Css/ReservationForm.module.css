@@ -1,6 +1,4 @@
-
-
-.ReservationCardContainer{
+.ReservationCardContainer {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -11,17 +9,16 @@
     width: 100%;
 }
 
-.imgContainer{
+.imgContainer {
     display: flex;
     justify-content: center;
     align-items: center;
     width: 100%;
     padding: 10px;
     object-fit: cover;
-
 }
 
-.CardContent{
+.CardContent {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -30,25 +27,22 @@
     width: 100%;
 }
 
-.imgContainer img{
+.imgContainer img {
     max-width: 300px;
     max-height: 200px;
-    
     border-radius: 10px;
-
 }
 
-.FormContainer{
+.FormContainer {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     width: 100%;
     padding: 10px;
-
 }
 
-.RoomTypeSelector{
+.RoomTypeSelector {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -58,7 +52,7 @@
     padding: 10px;
 }
 
-.RoomTypeSelector select{
+.RoomTypeSelector select {
     font-family: "FreightBigProMedium";
     font-size: 1.2rem;
     color: #000000;
@@ -67,7 +61,7 @@
     border-radius: 10px;
 }
 
-.CheckContainer{
+.CheckContainer {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -78,7 +72,7 @@
     text-align: center;
 }
 
-.CheckContainer input{
+.CheckContainer input {
     font-family: "FreightBigProMedium";
     font-size: 1.2rem;
     color: #000000;
@@ -88,7 +82,7 @@
     border: 1px solid #e0e0e0;
 }
 
-.FormContainer .button{
+.FormContainer .button {
     font-family: "FreightBigProMedium";
     font-size: 1.2rem;
     color: #F1F7ED;
@@ -96,10 +90,143 @@
     padding: 10px;
     width: 90%;
     margin: 10px;
-    margin-bottom: 10px ;
+    margin-bottom: 10px;
     text-align: center;
     border-radius: 10px;
     border: none;
     transition: all 0.5s ease-in-out;
 }
 
+/* Media Query for screens 768px and larger */
+@media (min-width: 768px) {
+    .ReservationCardContainer {
+        height: 70vh;
+        flex-direction: column;
+        overflow: hidden;
+    }
+
+    .ReservationFormHeader{
+        padding: 0px !important;
+    }
+
+    .ReservationCardContainer h1{
+        font-size: 1rem;
+    }
+
+    .imgContainer {
+        width: 60%;
+        height: 100%;
+        padding: 1vh;
+    }
+
+    .imgContainer img {
+        width: 100%;
+        height: 100%;
+        max-width: none;
+        max-height: none;
+        object-fit: cover;
+    }
+
+    .CardContent {
+        width: 100%;
+        height: 100%;
+        padding: 1vh;
+        justify-content: space-between;
+    }
+
+    .FormContainer {
+        height: 100%;
+        padding: 1vh;
+        justify-content: space-between;
+    }
+
+    .RoomTypeSelector {
+        padding: 0.5vh;
+        gap: 0.5vh;
+    }
+
+    .RoomTypeSelector select {
+        font-size: calc(0.8vh + 0.6vw);
+        padding: 0.8vh;
+        height: 5vh;
+    }
+
+    .CheckContainer {
+        padding: 0.5vh;
+        gap: 0.5vh;
+        flex-direction: column;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+    }
+
+    .CheckContainer input {
+        font-size: calc(0.8vh + 0.6vw);
+        padding: 0.8vh;
+        width: 100%;
+        height: 5vh;
+    }
+
+    .CheckinputBox {
+        width: 100%;
+        padding: 5px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+    }
+
+    .CheckinputBox input {
+        font-size: calc(0.8vh + 0.6vw);
+        padding: 0.8vh;
+        width: 100%;
+        height: 5vh;
+        margin: 5px;
+    }
+
+    .FormContainer .button {
+        font-size: calc(0.8vh + 0.6vw);
+        padding: 1vh;
+        width: 80%;
+        margin: 1vh auto;
+        height: 5vh;
+    }
+}
+
+/* Additional media query for taller screens */
+@media (min-width: 768px) and (min-height: 1000px) {
+    .RoomTypeSelector select,
+    .CheckContainer input,
+    .FormContainer .button {
+        font-size: 1.1rem;
+        height: 50px;
+    }
+}
+
+/* Additional media query for very wide screens */
+@media (min-width: 1200px) {
+    .ReservationCardContainer {
+        max-width: 1200px;
+        margin: 0 auto;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .imgContainer {
+        width: 70%;
+    }
+
+    .CardContent {
+        width: 100%;
+    }
+}
+
+/* Hover effect for the button */
+.FormContainer .button:hover {
+    background-color: #F1F7ED;
+    color: #B33951;
+    box-shadow: 0 10px 10px rgba(0, 0, 0, 0.541);
+    cursor: pointer;
+}

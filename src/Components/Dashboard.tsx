@@ -136,7 +136,8 @@ const Dashboard = () => {
       </header>
 
       <main className={styles.dashboardContent}>
-        {/* Current Bookings Section */}
+        <div className={styles.DashBoardContentInside}>
+          {/* Current Bookings Section */}
         <section className={styles.dashboardBookingsContainer}>
           <h2>Current Bookings</h2>
           {bookings.length > 0 ? (
@@ -159,21 +160,24 @@ const Dashboard = () => {
           <h2>Make a New Reservation</h2>
           <ReservationForm addBooking={addBooking}  />
         </section>
+        </div>
 
-        {/* Hotel Services Section */}
-        <section className="dashboard-section hotel-services">
-          <h2>Hotel Services</h2>
-          <HotelServices />
-        </section>
+        <div className={styles.FooterArea}>
+          {/* Hotel Services Section */}
+          <section className={styles.DashboardServices}>
+            <h2>Hotel Services</h2>
+            <HotelServices />
+          </section>
 
-        {/* Contact and Support Section */}
-        <section className="dashboard-section support">
-          <h2>Contact & Support</h2>
-          <p>
-            If you need help, please visit our <a href="#">Help Center</a> or{" "}
-            <a href="#">Contact Support</a>.
-          </p>
-        </section>
+          {/* Contact and Support Section */}
+          <section className={styles.dashboardSupport}>
+            <h2>Contact & Support</h2>
+            <p>
+              If you need help, please visit our <a href="#">Help Center</a> or{" "}
+              <a href="#">Contact Support</a>.
+            </p>
+          </section>
+        </div>
       </main>
 
       <footer className="dashboard-footer">

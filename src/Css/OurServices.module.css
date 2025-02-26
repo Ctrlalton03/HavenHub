@@ -1,9 +1,61 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap");
+
+
+@font-face {
+    font-family: "FreightBigProBold";
+    src: url('./Fonts/FreightBigProBold.ttf');
+}
+@font-face {
+    font-family: "FreightBigProBook";
+    src: url('./Fonts/FreightBigProBook.ttf');
+}
+@font-face {
+    font-family: "FreightBigProMedium";
+    src: url('./Fonts/FreightBigProMedium.ttf');
+}
+@font-face {
+    font-family: "FreightBigProLight";
+    src: url('./Fonts/FreightBigProLight.ttf');
+}
+@font-face{
+    font-family: "Muli";
+    src: url('./Fonts/Muli.ttf');
+}
+
+
+
+
+
+
 .ServicesLandingPage{
-    background-color: blue;
+    background-color: rgb(255, 255, 255);
     width: 100%;
-    height: 95vh;
+    height: 70vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 .ServicesOpeningSection{
-    background-color: red;
+    background-image: url('../Images/Spa1-min.jpg');
+    background-position: center 10%;
+    background-repeat:no-repeat ;
+    background-size: cover;
     width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    filter: brightness(0.5);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2); 
+}
+
+
+
+
+
+.ServicesOpeningSection h3{
+    font-family: FreightBigProLight;
+    font-size: 30px;
+    font-weight: 500;
 }

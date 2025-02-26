@@ -9,6 +9,11 @@ const ServicesPage = () =>{
                     <h3>Experience luxury and comfort with our premium services designed to make your stay unforgettable</h3>
                 </div>
             </section>
+            <section>
+                <div>
+                    
+                </div>
+            </section>
         </div>
     );
 };

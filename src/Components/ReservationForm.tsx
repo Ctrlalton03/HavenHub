@@ -8,7 +8,7 @@ import {
   SelectTrigger,
   SelectValue,
 } from "@/Components/ui/select"
-import { Card, CardHeader, CardContent, } from "./ui/card";
+import { Card, CardContent, } from "./ui/card";
 import { Button } from "./ui/button";
 import styles from "@/Css/ReservationForm.module.css";
 
@@ -86,9 +86,6 @@ interface RoomType {
     return (
         <>
         <Card className={styles.ReservationCardContainer}>
-          <CardHeader>
-            <h1>Reservation Form</h1>
-          </CardHeader>
           <CardContent className={styles.CardContent}>
             <div className={styles.imgContainer}>
               {/*Card Image */}
@@ -114,7 +111,7 @@ interface RoomType {
                 </Select>
               </div>
               <div className={styles.CheckContainer}>
-                <div>
+                <div className={styles.CheckinputBox}>
                   <Label htmlFor="checkInDate">Check-in Date</Label>
                   <Input
                     type="date"
@@ -125,7 +122,7 @@ interface RoomType {
                     required
                   />
                 </div>
-                <div>
+                <div className={styles.CheckinputBox}>
                 <Label htmlFor="checkout-date">Check-Out Date</Label>
                 <Input
                   type="date"
