@@ -3,7 +3,7 @@ import styles from '../Css/AboutUs.module.css';
 import { Link } from 'react-router-dom';
 
 
-const AboutUs = () => {
+const AboutUs: React.FC = () => {
 
     const sectionsRef = useRef<(HTMLDivElement | null)[]>([]);
 
@@ -35,7 +35,7 @@ const AboutUs = () => {
         };
     }, []);
 
-    const setSectionRef = (element: HTMLDivElement | null, index: number) => {
+    const setSectionRef = (element: HTMLDivElement | null, index: number): void => {
         if (element) sectionsRef.current[index] = element;
     };
 
@@ -50,7 +50,7 @@ const AboutUs = () => {
                     <div className={styles.WelcomeHeader}>
                         <div className={styles.WelcomeContent}>
                             <h1>About</h1>
-                            <p>Welcome to HavenHub, a premier hotel dedicated to providing guests with a truly exceptional experience. From the moment you arrive at our luxurious reception, you’ll be embraced by a blend of comfort and sophistication that sets us apart. Our mission is to make every stay unforgettable, offering personalized services and world-class amenities that cater to your every need.</p>
+                            <p>Welcome to HavenHub, a premier hotel dedicated to providing guests with a truly exceptional experience. From the moment you arrive at our luxurious reception, you'll be embraced by a blend of comfort and sophistication that sets us apart. Our mission is to make every stay unforgettable, offering personalized services and world-class amenities that cater to your every need.</p>
                         </div>
                         <div className={styles.ImageBreaker}>
                         <img src="../Images/AboutPageDesk.jpg" alt="Hotel" />
@@ -60,7 +60,7 @@ const AboutUs = () => {
                     <div className={`${styles.CommitmentList} ${styles['fade-in']}`} ref={(el) => setSectionRef(el, 0)}>
                         <div className={styles.CommitmentListContent}>
                             <h2>Our Commitment to Excellence</h2>
-                            <p>At HavenHub, your satisfaction is our top priority. Whether you’re visiting for business, leisure, or a special event, we offer a range of services designed to ensure your stay is nothing short of perfect:</p>
+                            <p>At HavenHub, your satisfaction is our top priority. Whether you're visiting for business, leisure, or a special event, we offer a range of services designed to ensure your stay is nothing short of perfect:</p>
                             <ul>
                                 <li>
                                     <h3>Personalized Concierge Services</h3>
