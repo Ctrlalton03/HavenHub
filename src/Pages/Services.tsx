@@ -1,4 +1,5 @@
 import styles from "../Css/OurServices.module.css"
+import HotelServices from "@/Components/HotelServicesSelection";
 
 const ServicesPage = () =>{
     return (
@@ -20,14 +21,7 @@ const ServicesPage = () =>{
                         experience.
                     </p>
                 </div>
-                <div className={styles.SelectorBox}>
-                    <ul>
-                        <li><a>Accommodation</a></li>
-                        <li><a>Dining</a></li>
-                        <li><a>Wellness</a></li>
-                        <li><a>Additional</a></li>
-                    </ul>
-                </div>
+                <HotelServices />
             </section>
         </div>
     );

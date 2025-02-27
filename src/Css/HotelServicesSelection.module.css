@@ -1,0 +1,66 @@
+
+@font-face {
+    font-family: "FreightBigProBold";
+    src: url('./Fonts/FreightBigProBold.ttf');
+}
+@font-face {
+    font-family: "FreightBigProBook";
+    src: url('./Fonts/FreightBigProBook.ttf');
+}
+@font-face {
+    font-family: "FreightBigProMedium";
+    src: url('./Fonts/FreightBigProMedium.ttf');
+}
+@font-face {
+    font-family: "FreightBigProLight";
+    src: url('./Fonts/FreightBigProLight.ttf');
+}
+@font-face{
+    font-family: "Muli";
+    src: url('./Fonts/Muli.ttf');
+}
+
+
+.SelectorBox{
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    height: 100%;
+    list-style: none;
+    background-color: rgb(171, 171, 171);
+    padding: 20px;
+}
+
+.SelectorBox ul{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    width: 100%;
+
+}
+
+.SelectorBox ul li{
+    font-family: FrieghtBigProLight;
+    color: #B33951;
+}
+
+.SelectorBox ul li a{
+    border: 1px solid black;
+    width: 100%;
+    height: 100%;
+    padding: 20px;
+    margin: 10px;
+    transition: 0.5s ease-in-out;
+}
+
+.SelectorBox ul li a:hover{
+    background-color: #B33951;
+    color: white;
+    cursor: pointer;
+    height: 100%;
+    width: 100%;
+}
+
+.SelectorBox ul li a::selection{
+    background-color: #B33951;
+}
