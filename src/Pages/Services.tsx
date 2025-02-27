@@ -11,7 +11,7 @@ const ServicesPage = () =>{
             </section>
             <section>
                 <div>
-                    
+                    <h1>Designed</h1>
                 </div>
             </section>
         </div>
