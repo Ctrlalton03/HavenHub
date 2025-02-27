@@ -27,6 +27,8 @@
 
 
 
+
+
 .ServicesLandingPage{
     background-color: rgb(255, 255, 255);
     width: 100%;
@@ -37,7 +39,7 @@
 }
 .ServicesOpeningSection{
     background-image: url('../Images/Spa1-min.jpg');
-    background-position: center 10%;
+    background-position: center 1% 1%;
     background-repeat:no-repeat ;
     background-size: cover;
     width: 100%;
@@ -46,16 +48,54 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    filter: brightness(0.5);
+    filter: brightness(0.8);
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2); 
+    text-align: center;
 }
 
 
 
 
 
-.ServicesOpeningSection h3{
-    font-family: FreightBigProLight;
-    font-size: 30px;
-    font-weight: 500;
+.ServicesOpeningSection h4{
+    font-family: "Lato";
+    color: #000000;
+    padding-left: 20px;
+    padding-right: 20px ;
+    font-size: 1.5rem;
+}
+
+.ServicesOpeningSection h1{
+    font-family: "FreightBigProBook";
+    font-size: 3rem;
+    font-weight: 700;
+    color: #B33951;
+}
+
+.ServicesOpeningText{
+    height: 40%;
+
+}
+
+.HotelDetails{
+    margin: 10px;
+}
+
+.HotelDetailsHeader{
+    text-align: center;
+}
+
+.SelectorBox{
+    margin-top: 10px;
+}
+
+.SelectorBox li{
+    border: 1px solid black;
+    padding: 10px;
+    transition: 0.5s ease-in-out;
+}
+
+.SelectorBox li:hover{
+    cursor: pointer;
+    background-color: #B33951;
 }
