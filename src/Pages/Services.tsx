@@ -1,5 +1,7 @@
 import styles from "../Css/OurServices.module.css"
 import HotelServices from "@/Components/HotelServicesSelection";
+import GuestTestimonal from "@/Components/GuestTestimonals";
+
 
 const ServicesPage = () =>{
     return (
@@ -22,6 +24,9 @@ const ServicesPage = () =>{
                     </p>
                 </div>
                 <HotelServices />
+                <div>
+                    <GuestTestimonal />
+                </div>
             </section>
         </div>
     );
