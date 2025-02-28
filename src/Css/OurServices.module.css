@@ -81,6 +81,14 @@
     margin: 10px;
 }
 
+.HotelDetailsHeader h1{
+    color: #B33951;
+    font-size: 2.5rem;
+    padding: 10px;
+    font-family: "FreightBigProBook";
+
+}
+
 .HotelDetailsHeader{
     text-align: center;
 }
@@ -89,13 +97,18 @@
     margin-top: 10px;
 }
 
-.SelectorBox li{
+.SelectorBox ul li{
     border: 1px solid black;
     padding: 10px;
     transition: 0.5s ease-in-out;
 }
 
-.SelectorBox li:hover{
+.SelectorBox ul li:hover{
+
     cursor: pointer;
     background-color: #B33951;
+}
+
+.CategorySelector{
+    background-color: white;
 }
