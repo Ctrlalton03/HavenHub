@@ -140,7 +140,7 @@ const HotelServices = () =>{
                     ))}
                 </ul>
             </div>
-            <div>
+            <div className={styles.CategoryCardContainer}>
                 {HotelServicesCategories.find((CategoryName) => CategoryName.category === selectedCategory)
                 ?.services.map((service) => (
                     <div
