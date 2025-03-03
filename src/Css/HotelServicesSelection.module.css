@@ -134,7 +134,10 @@ margin: 20px;
 .GuestList{
     display: flex;
     flex-direction: column;
+    justify-content: center;
+    align-items: center;
     gap: 10px;
+
 }
 
 .GuestList li h1{
@@ -156,6 +159,7 @@ margin: 20px;
     padding: 10px;
     flex-direction: column;
     border: 1px solid black;
+    max-width: 700px;
     border-radius: 10px;
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2); /* Soft shadow */
 

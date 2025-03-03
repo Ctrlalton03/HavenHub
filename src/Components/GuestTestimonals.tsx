@@ -1,6 +1,7 @@
 import styles from '../Css/HotelServicesSelection.module.css';
 import Taylor from '@/Images/taylorHeadshot.jpg'
 import James from '@/Images/James.jpg'
+import Emma from '@/Images/Emma.jpg'
 
 
 const GuestTestimonal = () => {
@@ -8,15 +9,20 @@ const GuestTestimonal = () => {
 
     const GuestUsers = [
         {
-            user: "James",
+            user: "James Sampson",
             image: James,
-            testimonal:"The spa services at Haven Hub were exceptional. The staff was attentive and professional, and the massage was one of the best I've ever had. Highly recommended!"
+            testimonal:"The dining experience was outstanding. The food was delicious, and the service was impeccable. The skyline bar offers amazing views and great cocktails."
         },
         {
-            user: "Taylor",
+            user: "Taylor Johnson",
             image: Taylor,
             testimonal:"The spa services at Haven Hub were exceptional. The staff was attentive and professional, and the massage was one of the best I've ever had. Highly recommended!"
         },
+        {
+            user: "Emma Rodriguez",
+            image: Emma,
+            testimonal: "The concierge service was incredibly helpful. They arranged tours, made restaurant reservations, and provided excellent local recommendations that made our stay perfect."
+        }
     ]
 
     return(

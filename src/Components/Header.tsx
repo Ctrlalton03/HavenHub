@@ -50,7 +50,6 @@ const Header = () => {
           </div>
           <ul className={`nav-links ${isOpen ? 'active' : ''}`}>
             <li><Link to="/" onClick={toggleMenu}>Home</Link></li>
-            <li><Link to="/rooms" onClick={toggleMenu}>Rooms</Link></li>
             <li><Link to="/About" onClick={toggleMenu}>About Us</Link></li>
             <li><Link to="/contact" onClick={toggleMenu}>Contact Us</Link></li>
             <li><Link to="/services" onClick={toggleMenu}>Services & Amenities</Link></li>
@@ -87,7 +86,6 @@ const Header = () => {
           <ul className={`nav-links ${isOpen ? 'active' : ''}`}>
             <li><Link to="/" onClick={toggleMenu}>Home</Link></li>
             <li><Link to="/services" onClick={toggleMenu}>Services</Link></li>
-            <li><Link to="/rooms" onClick={toggleMenu}>Rooms</Link></li>
             <li><Link to="/About" onClick={toggleMenu}>About Us</Link></li>
             <li><Link to="/contact" onClick={toggleMenu}>Contact Us</Link></li>
             {!isAuthenticated ? (

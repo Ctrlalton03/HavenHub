@@ -38,7 +38,7 @@
     align-items: center;
 }
 .ServicesOpeningSection{
-    background-image: url('../Images/Spa1-min.jpg');
+    background-image: url('../Images/hotelServices.jpg');
     background-position: center 1% 1%;
     background-repeat:no-repeat ;
     background-size: cover;
@@ -48,7 +48,6 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    filter: brightness(0.8);
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2); 
     text-align: center;
 }
@@ -59,7 +58,7 @@
 
 .ServicesOpeningSection h4{
     font-family: "Lato";
-    color: #000000;
+    color: #ffffff;
     padding-left: 20px;
     padding-right: 20px ;
     font-size: 1.5rem;

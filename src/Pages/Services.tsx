@@ -3,6 +3,7 @@ import HotelServices from "@/Components/HotelServicesSelection";
 import GuestTestimonal from "@/Components/GuestTestimonals";
 
 
+
 const ServicesPage = () =>{
     return (
         <div>
@@ -28,6 +29,9 @@ const ServicesPage = () =>{
                     <GuestTestimonal />
                 </div>
             </section>
+            <footer className="dashboard-footer">
+                <p>&copy; 2024 HavenHub. All rights reserved.</p>
+            </footer>
         </div>
     );
 };
